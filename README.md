@@ -39,6 +39,20 @@ NO NEED TO INJECT in controller directly use in html.
                                 </p>
 ```
 
+## Option variables
+
+You can affect how letteravatar operates with the following settings:
+
+name | default | description
+-----|---------|------------
+`charCount` | 1 | Specifies the number letters to displayed.
+`data` |  | input data
+`height` | 50px | set the height for the avatar
+`width` | 50px | set the width for the avatar
+`fontWeight` | 400 | set the font weight for the  avatar
+`fontSize` | 30px | set the font size for the letter
+`shape` | square | set the shape for the avatar. 'round'
+`fontFamily` | HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica, Arial,Lucida Grande, sans-serif | set the font Family of the avatar.
 
 
 ## Contributions
