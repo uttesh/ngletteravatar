@@ -1,0 +1,15 @@
+{
+    "name": "ng-letter-avatar",
+ 	"main": "./ngletteravatar.js",
+	"version": "0.0.1",
+	"keywords": [
+		"angular",
+		"ngletteravatar",
+		"letteravatar",
+		"gmaillikelettericon",
+		"letterimage"
+	],
+	  "dependencies": {
+		"angular": "*"
+	  }
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html ng-app="letterAvatarApp">
+<head>
+	<title>LetterAvatar</title>
+	<script src="demo/jquery.js"></script>
+	<script src="demo/angular.js"></script>
+	<script src="ngletteravatar.js"></script>
+	<script src="demo/app.js"></script>
+	<link rel="stylesheet" href="demo/bootstrap/css/bootstrap.min.css" />
+
+</head>
+<body ng-controller="LoadDates" style="margin: 0 25px 0; padding: 0 15px 0;">
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
+      <div class="container" style="height: 72px;">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><ng-letter-avatar data="la" charCount="2" shape="round"></ng-letter-avatar> LetterAvatar</a>
+        </div>
+
+      </div>
+</div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron" style="margin-top:96px">
+      <div class="container">
+        <h1>ng-letter-avatar!</h1>
+        <p>directive for the letter avatar for the given string like gmail, first letter of the given data will be the avatar</p>
+        <p><a class="btn btn-primary btn-lg" role="button" href="https://codeload.github.com/uttesh/ngtimeago/zip/master">Download</a></p>
+      </div>
+    </div>
+	
+	<div class="jumbotron">
+      <div class="container">
+        <h1>Default shape</h1>
+		<section>
+        <ng-letter-avatar data="a"></ng-letter-avatar>
+		<ng-letter-avatar data="b"></ng-letter-avatar>
+		<ng-letter-avatar data="c"></ng-letter-avatar>
+		<ng-letter-avatar data="d"></ng-letter-avatar>
+		<ng-letter-avatar data="e"></ng-letter-avatar>
+		<ng-letter-avatar data="f"></ng-letter-avatar>
+		<ng-letter-avatar data="h"></ng-letter-avatar>
+		<ng-letter-avatar data="i"></ng-letter-avatar>
+		<ng-letter-avatar data="j"></ng-letter-avatar>
+		</section>
+		<section style="margin-top:10px">
+		
+		<ng-letter-avatar data="k"></ng-letter-avatar>
+		<ng-letter-avatar data="l"></ng-letter-avatar>
+		<ng-letter-avatar data="m"></ng-letter-avatar>
+		<ng-letter-avatar data="n"></ng-letter-avatar>
+		<ng-letter-avatar data="o"></ng-letter-avatar>
+		<ng-letter-avatar data="p"></ng-letter-avatar>
+		<ng-letter-avatar data="q"></ng-letter-avatar>
+		<ng-letter-avatar data="r"></ng-letter-avatar>
+		<ng-letter-avatar data="s"></ng-letter-avatar>
+		</section >
+		<section style="margin-top:10px">
+		
+		
+		<ng-letter-avatar data="t"></ng-letter-avatar>
+		<ng-letter-avatar data="u"></ng-letter-avatar>
+		<ng-letter-avatar data="v"></ng-letter-avatar>
+		<ng-letter-avatar data="w"></ng-letter-avatar>
+		<ng-letter-avatar data="x"></ng-letter-avatar>
+		<ng-letter-avatar data="y"></ng-letter-avatar>
+		<ng-letter-avatar data="z"></ng-letter-avatar>
+		</section >
+		
+		<h1>Round shape</h1>
+		<section>
+        <ng-letter-avatar data="a" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="b" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="c" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="d" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="e" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="f" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="h" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="i" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="j" shape="round"></ng-letter-avatar>
+		</section>
+		<section style="margin-top:10px">
+		
+		<ng-letter-avatar data="k" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="l" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="m" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="n" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="o" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="p" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="q" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="r" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="s" shape="round"></ng-letter-avatar>
+		</section >
+		<section style="margin-top:10px">
+		
+		
+		<ng-letter-avatar data="t" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="u" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="v" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="w" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="x" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="y" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="z" shape="round"></ng-letter-avatar>
+		</section >
+      </div>
+    </div>
+	
+	<div class="jumbotron">
+      <div class="container">
+        <h1>Quick start</h1>
+         <p>
+		 
+<pre>
+bower install ng-timeago
+</pre> <br>
+or alternatively download and include `ngtimeago.js` after `angular.min.js`. <br>
+
+Add the `ngtimeago` module as a dependency when creating your app, e.g. <br>
+
+<pre>
+var app = angular.module('myApp', ['ngTimeago']);`
+</pre><br>
+
+NO NEED TO INJECT in controller directly use in html.
+
+
+		 </p>
+      </div>
+    </div>
+
+
+
+
+</body>
+</html>
