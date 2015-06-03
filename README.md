@@ -5,7 +5,7 @@ AngularJS directive for simple data avatar like gmail/inbox.
 ## Quick start
 
 ```
-bower install ngletteravata
+bower install ngletteravatar
 ```
 
 
