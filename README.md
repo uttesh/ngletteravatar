@@ -33,6 +33,10 @@ NO NEED TO INJECT in controller directly use in html.
                                     </small>
                                 </p>
 ```
+ preview snaps :
+ 
+![demo](https://raw.github.com/uttesh/ngletteravatar/master/demo/demo1.png)
+![demo](https://raw.github.com/uttesh/ngletteravatar/master/demo/demo2.png)
 
 
 ## Contributions
