@@ -5,12 +5,9 @@ AngularJS directive for simple data avatar like gmail/inbox.
 ## Quick start
 
 ```
-bower install ng-letter-avatar
+bower install ngletteravatar
 ```
-new version
-```
-bower install ng-letter-avatar0.0.1
-```
+
 
 or alternatively download and include `ngletteravatar.js` after `angular.min.js`.
 
