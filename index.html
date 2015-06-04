@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html ng-app="letterAvatarApp">
+<head>
+	<title>LetterAvatar</title>
+	<link rel="icon" href="https://raw.githubusercontent.com/uttesh/ngletteravatar/master/demo/logo.png" type="image/png">
+	<script src="static/lib/jquery.js"></script>
+	<script src="static/lib/angular.js"></script>
+	<script src="static/js/ngletteravatar.js"></script>
+	<script src="static/js/app.js"></script>
+	<link rel="stylesheet" href="static/css/bootstrap/css/bootstrap-flatly.css" />
+
+</head>
+
+<body style="font-size: 14px;" >
+<div class="navbar navbar-default" role="navigation" >
+      <div class="container" style="height: 72px;">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" style="height: inherit;" href="#"><ng-letter-avatar data="la" charCount="2" shape="round"></ng-letter-avatar> LetterAvatar</a>
+        </div>
+
+      </div>
+</div>
+<div class="container">
+	
+
+<a href="https://github.com/uttesh/ngletteravatar">
+	<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>ng-letter-avatar!</h1>
+        <p>directive for the letter avatar for the given string like gmail, first letter of the given data will be the avatar</p>
+        <p><a class="btn btn-primary btn-lg" role="button" href="https://codeload.github.com/uttesh/ngletteravatar/zip/master">Download</a></p>
+      </div>
+    </div>
+	
+	<div class="jumbotron">
+      <div class="container">
+        <h1>Default shape</h1>
+		<section>
+        <ng-letter-avatar data="a"></ng-letter-avatar>
+		<ng-letter-avatar data="b"></ng-letter-avatar>
+		<ng-letter-avatar data="c"></ng-letter-avatar>
+		<ng-letter-avatar data="d"></ng-letter-avatar>
+		<ng-letter-avatar data="e"></ng-letter-avatar>
+		<ng-letter-avatar data="f"></ng-letter-avatar>
+		<ng-letter-avatar data="h"></ng-letter-avatar>
+		<ng-letter-avatar data="i"></ng-letter-avatar>
+		<ng-letter-avatar data="j"></ng-letter-avatar>
+		</section>
+		<section style="margin-top:10px">
+		
+		<ng-letter-avatar data="k"></ng-letter-avatar>
+		<ng-letter-avatar data="l"></ng-letter-avatar>
+		<ng-letter-avatar data="m"></ng-letter-avatar>
+		<ng-letter-avatar data="n"></ng-letter-avatar>
+		<ng-letter-avatar data="o"></ng-letter-avatar>
+		<ng-letter-avatar data="p"></ng-letter-avatar>
+		<ng-letter-avatar data="q"></ng-letter-avatar>
+		<ng-letter-avatar data="r"></ng-letter-avatar>
+		<ng-letter-avatar data="s"></ng-letter-avatar>
+		</section >
+		<section style="margin-top:10px">
+		
+		
+		<ng-letter-avatar data="t"></ng-letter-avatar>
+		<ng-letter-avatar data="u"></ng-letter-avatar>
+		<ng-letter-avatar data="v"></ng-letter-avatar>
+		<ng-letter-avatar data="w"></ng-letter-avatar>
+		<ng-letter-avatar data="x"></ng-letter-avatar>
+		<ng-letter-avatar data="y"></ng-letter-avatar>
+		<ng-letter-avatar data="z"></ng-letter-avatar>
+		</section >
+		
+		<h1>Round shape</h1>
+		<section>
+        <ng-letter-avatar data="a" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="b" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="c" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="d" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="e" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="f" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="h" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="i" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="j" shape="round"></ng-letter-avatar>
+		</section>
+		<section style="margin-top:10px">
+		
+		<ng-letter-avatar data="k" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="l" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="m" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="n" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="o" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="p" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="q" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="r" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="s" shape="round"></ng-letter-avatar>
+		</section >
+		<section style="margin-top:10px">
+		
+		
+		<ng-letter-avatar data="t" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="u" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="v" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="w" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="x" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="y" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="z" shape="round"></ng-letter-avatar>
+		</section >
+      </div>
+    </div>
+	
+	<div class="jumbotron">
+      <div class="container">
+        <h1>Quick start</h1>
+         <p>
+		 
+<pre>
+bower install ngletteravatar
+</pre> 
+<p>
+or alternatively download and include `ngletteravatar.js` after `angular.min.js`. <br>
+Add the `ngletteravatar` module as a dependency when creating your app, e.g. <br>
+</p>
+<pre>
+var app = angular.module('myApp', ['ngLetterAvatar']);`
+</pre>
+
+<pre>
+<img src="https://raw.github.com/uttesh/ngletteravatar/master/demo/sample1.png"> result : <ng-letter-avatar data="uttesh"></ng-letter-avatar>
+<img src="https://raw.github.com/uttesh/ngletteravatar/master/demo/sample2.png"> result : <ng-letter-avatar data="uttesh" shape="round"></ng-letter-avatar>
+</pre>
+attribute table
+<table class="table table-bordered table-striped">
+      <colgroup>
+        <col class="col-xs-1">
+        <col class="col-xs-7">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Attribute</th>
+          <th>Default</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">
+            <code>charCount</code>
+          </th>
+          <td>1</td>
+          <td>Specifies the number letters to displayed.</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <code>data</code>
+          </th>
+          <td></td>
+          <td>input data</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <code>height</code>
+          </th>
+          <td>50</td>
+          <td>set the height for the avatar all values in pixel only, dont append "px"</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <code>width</code>
+          </th>
+          <td>50</td>
+          <td>set the width for the avatar all values in pixel only, dont append "px"</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <code>fontWeight</code>
+          </th>
+          <td>400</td>
+          <td>set the font weight for the avatar</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <code>fontSize</code>
+          </th>
+          <td>30</td>
+          <td>set the font size for the letter all values in pixel only, dont append "px"</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <code>shape</code>
+          </th>
+          <td>square</td>
+          <td>set the shape for the avatar. set 'round' for rounded avatars</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <code>fontFamily</code>
+          </th>
+          <td>HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica, Arial,Lucida Grande, sans-serif</td>
+          <td>set the font Family of the avatar.</td>
+        </tr>
+      </tbody>
+    </table>
+
+</div>
+
+
+</body>
+</html>
