@@ -1,7 +1,7 @@
 # ng-letter-avatar
 
 AngularJS directive for simple data avatar like gmail/inbox. 
-
+<a href="http://uttesh.github.io/ngletteravatar/">demo</a>
  preview snaps :
  
 ![demo](https://raw.github.com/uttesh/ngletteravatar/master/demo/demo1.png)
