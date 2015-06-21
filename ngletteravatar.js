@@ -8,8 +8,9 @@ catalyst.directive('ngLetterAvatar', function() {
                 restrict: 'E',
                 link: function(scope, element, attrs) {
 
-							// Defining Colors
         var colors = ["#1abc9c", "#16a085", "#f1c40f", "#f39c12", "#2ecc71", "#27ae60", "#e67e22", "#d35400", "#3498db", "#2980b9", "#e74c3c", "#c0392b", "#9b59b6", "#8e44ad", "#bdc3c7", "#34495e", "#2c3e50", "#95a5a6", "#7f8c8d", "#ec87bf", "#d870ad", "#f69785", "#9ba37e", "#b49255", "#b49255", "#a94136"];
+		
+		 var random = ["#8e44ad", "#bdc3c7", "#34495e", "#2c3e50", "#95a5a6", "#7f8c8d", "#ec87bf", "#d870ad", "#f69785", "#9ba37e", "#b49255", "#b49255", "#a94136"];
 
 					var charCount = attrs.charcount;
 					var data = attrs.data;
@@ -55,8 +56,22 @@ catalyst.directive('ngLetterAvatar', function() {
 						'font-weight': fontWeight,
 						'font-size': fontSize+'px',
 					});
-					
-				var colorIndex = Math.floor((c.charCodeAt(0) - 65) % colors.length);
+				console.log('character '+c);
+				console.log('c.charCodeAt(0)'+c.charCodeAt(0));
+				var colorIndex = '';
+				var color = '';
+				if(c.charCodeAt(0) < 65){
+					var letters = '0123456789ABCDEF'.split('');
+					var _color = '#';
+						for (var i = 0; i < 6; i++ ) {
+							_color += letters[Math.floor(Math.random() * 16)];
+						}
+					color = _color;
+				}else{
+				    colorIndex = Math.floor((c.charCodeAt(0) - 65) % colors.length);
+					color =  colors[colorIndex];
+				}
+				
 			
 				var svg = $('<svg></svg>').attr({
 					'xmlns': 'http://www.w3.org/2000/svg',
@@ -64,7 +79,7 @@ catalyst.directive('ngLetterAvatar', function() {
 					'width': width,
 					'height': height
 				}).css({
-					'background-color': colors[colorIndex],
+					'background-color': color,
 					'width': width+'px',
 					'height': height+'px'
 				});
