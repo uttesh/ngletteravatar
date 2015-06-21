@@ -6,7 +6,12 @@ AngularJS directive for simple data avatar like gmail/inbox.
  
 ![demo](https://raw.github.com/uttesh/ngletteravatar/master/demo/demo1.png)
 ![demo](https://raw.github.com/uttesh/ngletteravatar/master/demo/demo2.png)
-
+![demo](https://raw.github.com/uttesh/ngletteravatar/master/demo/numbers.png)
+![demo](https://raw.github.com/uttesh/ngletteravatar/master/demo/special_charaters.png)
+![demo](https://raw.github.com/uttesh/ngletteravatar/master/demo/chinese.png)
+![demo](https://raw.github.com/uttesh/ngletteravatar/master/demo/kannada.png)
+![demo](https://raw.github.com/uttesh/ngletteravatar/master/demo/round_shape_digit_special.png)
+![demo](https://raw.github.com/uttesh/ngletteravatar/master/demo/round_chinese_kannada.png)
 ## Quick start
 
 ```
