@@ -1,5 +1,7 @@
 # ng-letter-avatar
 
+[![Join the chat at https://gitter.im/uttesh/ngletteravatar](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/uttesh/ngletteravatar?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 AngularJS directive for simple data avatar like gmail/inbox. 
 <a href="http://uttesh.github.io/ngletteravatar/">demo</a>
  preview snaps :
