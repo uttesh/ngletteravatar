@@ -14,6 +14,8 @@ AngularJS directive for simple data avatar like gmail/inbox.
 ![demo](https://raw.github.com/uttesh/ngletteravatar/master/demo/kannada.png)
 ![demo](https://raw.github.com/uttesh/ngletteravatar/master/demo/round_shape_digit_special.png)
 ![demo](https://raw.github.com/uttesh/ngletteravatar/master/demo/round_chinese_kannada.png)
+![demo](https://raw.github.com/uttesh/ngletteravatar/master/demo/avatar_border1.png)
+![demo](https://raw.github.com/uttesh/ngletteravatar/master/demo/avatar_border2.png)
 ## Quick start
 
 ```
@@ -60,7 +62,8 @@ name | default | description
 `fontSize` | 30px | set the font size for the letter
 `shape` | square  | set the shape for the avatar. set 'round' for rounded avatars
 `fontFamily` | HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica, Arial,Lucida Grande, sans-serif | set the font Family of the avatar.
-
+`avatarborder` | false | set the avatarborder to 'true' for the white border to avatar.
+`avatarcustomborder` | no default value | using this attribute set the custom style to avatar borders i.e <code> "border:5px solid black"</code>.
 
 ## Contributions
 
