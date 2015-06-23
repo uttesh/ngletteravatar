@@ -1,3 +1,9 @@
+/**
+ * NG Letter Avatar is directive for AngularJS apps
+ * @version v2.0.1 - 2015-05-25 * @link https://github.com/uttesh/ngletteravatar
+ * @author Uttesh Kumar T.H. <uttesh@gmail.com>
+ * @license MIT License, http://www.opensource.org/licenses/MIT
+ */
 'use strict';
 
 var catalyst = angular.module('ngLetterAvatar', []);
@@ -20,6 +26,10 @@ catalyst.directive('ngLetterAvatar', function() {
 					var fontSize = attrs.fontSize;
 					var fontWeight = attrs.fontweight;
 					var fontFamily = attrs.fontfamily;
+					var avatarBorderStyle = attrs.avatarcustomborder;
+					var avatardefaultBorder = attrs.avatarborder;
+					var defaultBorder = "border:5px solid white";
+					
 					var shape = attrs.shape;
                     if (!charCount) {
                         charCount = 1;
@@ -43,7 +53,6 @@ catalyst.directive('ngLetterAvatar', function() {
                         fontFamily = 'HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica, Arial,Lucida Grande, sans-serif';
                     }
 					var c = data.substr(0, charCount).toUpperCase();
-					console.log('character'+c);
 			
 					var cobj = $('<text text-anchor="middle"></text>').attr({
 						'y': '50%',
@@ -56,8 +65,6 @@ catalyst.directive('ngLetterAvatar', function() {
 						'font-weight': fontWeight,
 						'font-size': fontSize+'px',
 					});
-				console.log('character '+c);
-				console.log('c.charCodeAt(0)'+c.charCodeAt(0));
 				var colorIndex = '';
 				var color = '';
 				if(c.charCodeAt(0) < 65){
@@ -82,17 +89,30 @@ catalyst.directive('ngLetterAvatar', function() {
 					'background-color': color,
 					'width': width+'px',
 					'height': height+'px'
+					//'border': '5px solid red'
 				});
 					svg.append(cobj);
 					var svgHtml = window.btoa(unescape(encodeURIComponent($('<div>').append(svg.clone()).html())));	
 					var component;
 					var base = 'data:image/svg+xml;base64,';
+					var _style = '';
+					    if(avatarBorderStyle){
+						 console.log('if avatarBorderStyle');
+							    _style = avatarBorderStyle;
+						}else if(avatardefaultBorder){
+						console.log('if avatardefaultBorder');
+								_style = defaultBorder;
+						}					
+					
 					if(shape){
 						if(shape ==='round'){
-						 	component = "<img src="+base+svgHtml+" style='border-radius:30px;'/>";
+							var round_style = "border-radius:30px;"+_style;
+							console.log("round style"+round_style)
+							component = "<img src="+base+svgHtml+" style='"+round_style+"' />";
 						}
 					}else{
-						    component = "<img src="+base+svgHtml+" />";
+						console.log("square style"+_style)
+						component = "<img src="+base+svgHtml+" style='"+_style+"' />";
 					}
 					element.append(component);
                 }

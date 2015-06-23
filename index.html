@@ -15,8 +15,8 @@
 </head>
 
 <body style="font-size: 14px;" >
-<div class="navbar navbar-default" role="navigation" >
-      <div class="container" style="height: 72px;">
+<div class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -24,18 +24,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" style="height: inherit;" href="#"><ng-letter-avatar data="la" charCount="2" shape="round"></ng-letter-avatar> LetterAvatar</a>
+          <a class="navbar-brand" style="height: inherit;" href="#"><ng-letter-avatar data="la" charCount="2" shape="round" avatarborder="true"></ng-letter-avatar> LetterAvatar</a>
         </div>
-
-      </div>
-</div>
-<div class="container">
 	
 
 <a href="https://github.com/uttesh/ngletteravatar">
 	<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+      </div>
+</div>
+<div class="container">
+
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
+    <div class="jumbotron" style="margin-top:50px">
       <div class="container">
         <h1>ng-letter-avatar!</h1>
         <p>directive for the letter avatar for the given string like gmail, first letter of the given data will be the avatar</p>
@@ -59,7 +59,7 @@
 		</section>
 		<section style="margin-top:10px">
 		
-		<ng-letter-avatar data="k"></ng-letter-avatar>
+		<ng-letter-avatar data="k" ></ng-letter-avatar>
 		<ng-letter-avatar data="l"></ng-letter-avatar>
 		<ng-letter-avatar data="m"></ng-letter-avatar>
 		<ng-letter-avatar data="n"></ng-letter-avatar>
@@ -80,6 +80,21 @@
 		<ng-letter-avatar data="y"></ng-letter-avatar>
 		<ng-letter-avatar data="z"></ng-letter-avatar>
 		</section >
+		
+		<h1>avatar border styles</h1>
+		<section>
+		<h4>avatarborder="true" :</h4> 
+		<ng-letter-avatar data="a" avatarborder="true" ></ng-letter-avatar>
+		<ng-letter-avatar data="b" avatarborder="true" ></ng-letter-avatar>
+		<ng-letter-avatar data="c" avatarborder="true" ></ng-letter-avatar>
+		<ng-letter-avatar data="d" avatarborder="true" ></ng-letter-avatar>
+		<ng-letter-avatar data="e" avatarborder="true" ></ng-letter-avatar>
+		<ng-letter-avatar data="f" avatarborder="true" ></ng-letter-avatar>
+		<ng-letter-avatar data="h" avatarborder="true" ></ng-letter-avatar>
+		<ng-letter-avatar data="i" avatarborder="true" ></ng-letter-avatar>
+		<ng-letter-avatar data="j" avatarborder="true" ></ng-letter-avatar>
+		<h4>avatarcustomborder="border:5px solid black" :</h4> <ng-letter-avatar data="A" avatarcustomborder="border:5px solid black"></ng-letter-avatar>
+		</section>
 		<h1>Numbers</h1>
 		<section style="margin-top:10px">
         <ng-letter-avatar data="0" ></ng-letter-avatar>
@@ -256,19 +271,32 @@
 		<ng-letter-avatar data="/" shape="round"></ng-letter-avatar>
 		<ng-letter-avatar data="~" shape="round"></ng-letter-avatar>
 		</section>
-
+		<h1>avatar border styles</h1>
+		<section>
+		<h4>avatarborder="true" :</h4> 
+		<ng-letter-avatar data="a" avatarborder="true" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="b" avatarborder="true" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="c" avatarborder="true" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="d" avatarborder="true" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="e" avatarborder="true" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="f" avatarborder="true" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="h" avatarborder="true" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="i" avatarborder="true" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="j" avatarborder="true" shape="round"></ng-letter-avatar>
+		<h4>avatarcustomborder="border:5px solid black" :</h4> <ng-letter-avatar data="A" shape="round" avatarcustomborder="border:5px solid black"></ng-letter-avatar>
+		</section>
 		<h1>Chinese</h1>
 		<section style="margin-top:10px">
-		<ng-letter-avatar data="餐‎" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="飲‎" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="餐‎" shape="round" avatarborder="true"></ng-letter-avatar>
+		<ng-letter-avatar data="飲‎" shape="round" avatarborder="true"></ng-letter-avatar>
 		<ng-letter-avatar data="業‎" shape="round"></ng-letter-avatar>
 		<ng-letter-avatar data="電" shape="round"></ng-letter-avatar>
 		</section>
 		
 		<h1>ಕನ್ನಡ ಅಕ್ಷರಮಾಲೆ </h1>
 		<section style="margin-top:10px">
-		<ng-letter-avatar data="ಅ‎" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="ಆ‎" shape="round"></ng-letter-avatar>
+		<ng-letter-avatar data="ಅ‎" shape="round" avatarborder="true"></ng-letter-avatar>
+		<ng-letter-avatar data="ಆ‎" shape="round" avatarborder="true"></ng-letter-avatar>
 		<ng-letter-avatar data="ಇ‎" shape="round"></ng-letter-avatar>
 		<ng-letter-avatar data="ಈ‎" shape="round"></ng-letter-avatar>
 		<ng-letter-avatar data="ಉ‎" shape="round"></ng-letter-avatar>
@@ -306,6 +334,7 @@ var app = angular.module('myApp', ['ngLetterAvatar']);`
 <pre>
 <img src="https://raw.github.com/uttesh/ngletteravatar/master/demo/sample1.png"> result : <ng-letter-avatar data="uttesh"></ng-letter-avatar>
 <img src="https://raw.github.com/uttesh/ngletteravatar/master/demo/sample2.png"> result : <ng-letter-avatar data="uttesh"shape="round"></ng-letter-avatar>
+<img src="https://raw.github.com/uttesh/ngletteravatar/master/demo/sample3.png"> result : <ng-letter-avatar data="uttesh" avatarborder="true" shape="round"></ng-letter-avatar>
 
 </pre>
 attribute table
@@ -377,6 +406,20 @@ attribute table
           </th>
           <td>HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica, Arial,Lucida Grande, sans-serif</td>
           <td>set the font Family of the avatar.</td>
+        </tr>
+		<tr>
+          <th scope="row">
+            <code>avatarborder</code>
+          </th>
+          <td>false</td>
+          <td>set the avatarborder to 'true' for the white border to avatar.</td>
+        </tr>
+		<tr>
+          <th scope="row">
+            <code>avatarcustomborder</code>
+          </th>
+          <td>no default value</td>
+          <td>using this attribute set the custom style to avatar borders i.e <code> "border:5px solid black"</code></td>
         </tr>
       </tbody>
     </table>
