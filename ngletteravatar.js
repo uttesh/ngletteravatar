@@ -97,10 +97,10 @@ catalyst.directive('ngLetterAvatar', function() {
 					var base = 'data:image/svg+xml;base64,';
 					var _style = '';
 					    if(avatarBorderStyle){
-						 console.log('if avatarBorderStyle');
+						
 							    _style = avatarBorderStyle;
 						}else if(avatardefaultBorder){
-						console.log('if avatardefaultBorder');
+						
 								_style = defaultBorder;
 						}					
 					
@@ -111,7 +111,7 @@ catalyst.directive('ngLetterAvatar', function() {
 							component = "<img src="+base+svgHtml+" style='"+round_style+"' />";
 						}
 					}else{
-						console.log("square style"+_style)
+					
 						component = "<img src="+base+svgHtml+" style='"+_style+"' />";
 					}
 					element.append(component);
