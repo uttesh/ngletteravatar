@@ -1,7 +1,7 @@
 {
     "name": "ng-letter-avatar",
  	"main": "./ngletteravatar.js",
-	"version": "0.0.1",
+	"version": "2.0.1",
 	"keywords": [
 		"angular",
 		"ngletteravatar",

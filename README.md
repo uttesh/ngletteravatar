@@ -50,7 +50,7 @@ name | default | description
 `height` | 50px | set the height for the avatar
 `width` | 50px | set the width for the avatar
 `fontWeight` | 400 | set the font weight for the  avatar
-`fontSize` | 30px | set the font size for the letter
+`fontsize` | 30px | set the font size for the letter
 `shape` | square  | set the shape for the avatar. set 'round' for rounded avatars
 `fontFamily` | HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica, Arial,Lucida Grande, sans-serif | set the font Family of the avatar.
 
