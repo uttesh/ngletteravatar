@@ -1,6 +1,6 @@
 /**
  * NG Letter Avatar is directive for AngularJS apps
- * @version v3.0.0 - 2015-09-28 * @link https://github.com/uttesh/ngletteravatar
+ * @version v3.0.1 - 2015-09-28 * @link https://github.com/uttesh/ngletteravatar
  * @author Uttesh Kumar T.H. <uttesh@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
