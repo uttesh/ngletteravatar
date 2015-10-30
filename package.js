@@ -19,5 +19,5 @@ Package.onUse(function(api) {
 
   api.use('angular:angular@1.2.0', where); // Dependencies
 
-  api.addFiles('ngletteravatar', where); // Files in use
+  api.addFiles('ngletteravatar.js', where); // Files in use
 });   
