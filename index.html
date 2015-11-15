@@ -8,7 +8,7 @@
 	<link rel="icon" href="https://raw.githubusercontent.com/uttesh/ngletteravatar/master/demo/logo.png" type="image/png">
 	<script src="static/lib/jquery.js"></script>
 	<script src="static/lib/angular.js"></script>
-	<script src="static/js/ngletteravatar.js"></script>
+	<script src="static/js/ngletteravatar.min.js"></script>
 	<script src="static/js/app.js"></script>
 	<link rel="stylesheet" href="static/css/bootstrap/css/bootstrap-flatly.css" />
 
@@ -24,7 +24,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" style="height: inherit;" href="#"><ng-letter-avatar data="la" charCount="2" shape="round" avatarborder="true"></ng-letter-avatar> LetterAvatar</a>
+		  <div style="padding-bottom:20px">
+		  <div class="pull-left">
+          <ng-letter-avatar data="la" charCount="2" shape="round" avatarborder="true"></ng-letter-avatar> 
+		  </div>
+		   <div class="pull-right">
+		  <a class="navbar-brand" style="height: inherit;" href="#">LetterAvatar</a>
+		  </div>
+		  </div>
         </div>
 	
 
@@ -32,7 +39,7 @@
 	<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
       </div>
 </div>
-<div class="container">
+<div class="container" >
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron" style="margin-top:50px">
@@ -97,6 +104,23 @@
 		<ng-letter-avatar data="j" avatarborder="true" ></ng-letter-avatar>
 		<h4>avatarcustomborder="border:5px solid black" :</h4> <ng-letter-avatar data="A" avatarcustomborder="border:5px solid black"></ng-letter-avatar>
 		</section>
+		
+	    <h1>Custom alphabet colors</h1>
+		<section ng-controller="letterAvatarCtrl">
+		<h4>alphabetcolors=array of the colors</h4> 
+		<ng-letter-avatar data="a" alphabetcolors="customColors" ></ng-letter-avatar>
+		<ng-letter-avatar data="b" alphabetcolors="customColors"  ></ng-letter-avatar>
+		<ng-letter-avatar data="c" alphabetcolors="customColors"  ></ng-letter-avatar>
+		<ng-letter-avatar data="d" alphabetcolors="customColors" ></ng-letter-avatar>
+		<ng-letter-avatar data="e" alphabetcolors="customColors" ></ng-letter-avatar>
+		<ng-letter-avatar data="f" alphabetcolors="customColors" ></ng-letter-avatar>
+	        <ng-letter-avatar data="g" alphabetcolors="customColors"  ></ng-letter-avatar>
+		<ng-letter-avatar data="h" alphabetcolors="customColors"  ></ng-letter-avatar>
+		<ng-letter-avatar data="i" alphabetcolors="customColors"  ></ng-letter-avatar>
+		<ng-letter-avatar data="j" alphabetcolors="customColors"  ></ng-letter-avatar>
+		</section>
+		
+		
 		<h1>Numbers</h1>
 		<section style="margin-top:10px">
         <ng-letter-avatar data="0" ></ng-letter-avatar>
@@ -363,6 +387,13 @@ attribute table
         </tr>
       </thead>
       <tbody>
+	  <tr>
+          <th scope="row">
+            <code>alphabetcolors</code>
+          </th>
+          <td>default color set</td>
+          <td>using this attribute set the custom colors for the alphabets only i.e <code> alphabetcolors="customColors"</code></td>
+        </tr>
         <tr>
           <th scope="row">
             <code>charCount</code>
@@ -433,6 +464,7 @@ attribute table
           <td>no default value</td>
           <td>using this attribute set the custom style to avatar borders i.e <code> "border:5px solid black"</code></td>
         </tr>
+		
       </tbody>
     </table>
 

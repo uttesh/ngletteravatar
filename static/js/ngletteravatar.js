@@ -1,6 +1,6 @@
 /**
  * NG Letter Avatar is directive for AngularJS apps
- * @version v3.0.0 - 2015-09-28 * @link https://github.com/uttesh/ngletteravatar
+ * @version v3.0.1 - 2015-09-28 * @link https://github.com/uttesh/ngletteravatar
  * @author Uttesh Kumar T.H. <uttesh@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
@@ -25,8 +25,11 @@ nla.constant('defaultSettings', {
 
 nla.directive('ngLetterAvatar', ['defaultSettings',function(defaultSettings) {
             return {
-                restrict: 'E',
-				//replace: true,
+                restrict: 'AE',
+				replace: true,
+				scope: {
+					alphabetcolors: '=alphabetcolors'
+				},
                 link: function(scope, element, attrs) {
 					
 					var params = {
@@ -41,8 +44,13 @@ nla.directive('ngLetterAvatar', ['defaultSettings',function(defaultSettings) {
 						avatarBorderStyle:attrs.avatarcustomborder,
 						avatardefaultBorder:attrs.avatarborder,
 						defaultBorder:defaultSettings.defaultBorder,
-						shape:attrs.shape
+						shape:attrs.shape,
+						alphabetcolors: scope.alphabetcolors || defaultSettings.alphabetcolors
 					};
+					
+					if(attrs.alphabetcolors){
+						console.log(params.alphabetcolors.length);
+					}
 
 					var c = params.data.substr(0, params.charCount).toUpperCase();
 					var cobj = getCharacterObject(c,params.textColor,params.fontFamily,params.fontWeight,params.fontsize);
@@ -52,8 +60,8 @@ nla.directive('ngLetterAvatar', ['defaultSettings',function(defaultSettings) {
 					if(c.charCodeAt(0) < 65){
 						color = getRandomColors();
 					}else{
-						colorIndex = Math.floor((c.charCodeAt(0) - 65) % defaultSettings.alphabetcolors.length);
-						color =  defaultSettings.alphabetcolors[colorIndex];
+						colorIndex = Math.floor((c.charCodeAt(0) - 65) % params.alphabetcolors.length);
+						color =  params.alphabetcolors[colorIndex];
 					}
 				
 			
@@ -78,7 +86,7 @@ nla.directive('ngLetterAvatar', ['defaultSettings',function(defaultSettings) {
 					}else{
 						component = "<img src="+base+svgHtml+" style='"+_style+"' />";
 					}
-					element.append(component);
+					element.replaceWith(component);
                 }
             };
         }]);
