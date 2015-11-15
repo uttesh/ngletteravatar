@@ -5,9 +5,6 @@ var gulp  = require('gulp'),
 	minify = require('gulp-ngmin'),
 	ngAnnotate = require('gulp-ng-annotate');
 
-
-
-// create a default task and just log a message
 gulp.task('default', function() {
   return gulp.src('ngletteravatar.js')
     .pipe(ngAnnotate())
