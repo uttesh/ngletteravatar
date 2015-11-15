@@ -21,9 +21,7 @@ AngularJS directive for simple data avatar like gmail/inbox.
 ```
 bower install ngletteravatar
 ```
-
-
-or alternatively download and include `ngletteravatar.js` after `angular.min.js`.
+or alternatively download and include `ngletteravatar.js` after `angular.min.js`. minified version ngletteravatar.min.js is under dist folder.
 
 Add the `ngLetterAvatar` module as a dependency when creating your app, e.g.
 
