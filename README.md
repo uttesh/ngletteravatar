@@ -54,6 +54,7 @@ You can affect how letteravatar operates with the following settings:
 
 name | default | description
 -----|---------|------------
+`alphabetcolors` | default color set | Using this attribute set the custom colors for the alphabets only.
 `charCount` | 1 | Specifies the number letters to displayed.
 `data` |  | input data
 `height` | 50px | set the height for the avatar
