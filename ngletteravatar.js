@@ -28,7 +28,8 @@ nla.directive('ngLetterAvatar', ['defaultSettings',function(defaultSettings) {
                 restrict: 'AE',
 				replace: true,
 				scope: {
-					alphabetcolors: '=alphabetcolors'
+					alphabetcolors: '=alphabetcolors',
+					colorFunc : '&'
 				},
                 link: function(scope, element, attrs) {
 					
@@ -45,19 +46,21 @@ nla.directive('ngLetterAvatar', ['defaultSettings',function(defaultSettings) {
 						avatardefaultBorder:attrs.avatarborder,
 						defaultBorder:defaultSettings.defaultBorder,
 						shape:attrs.shape,
-						alphabetcolors: scope.alphabetcolors || defaultSettings.alphabetcolors
+						alphabetcolors: scope.alphabetcolors || defaultSettings.alphabetcolors,
+						boxColor : isNotNull(attrs.boxColor) ? attrs.boxColor : null,
+						colorFunc : scope.colorFunc()
 					};
 					
-					if(attrs.alphabetcolors){
-						console.log(params.alphabetcolors.length);
-					}
-
 					var c = params.data.substr(0, params.charCount).toUpperCase();
 					var cobj = getCharacterObject(c,params.textColor,params.fontFamily,params.fontWeight,params.fontsize);
 					var colorIndex = '';
 					var color = '';
 					
-					if(c.charCodeAt(0) < 65){
+					if (params.boxColor != null){
+						color = params.boxColor;
+					}else if (params.colorFunc) {
+						color = params.colorFunc(c);
+					}else if(c.charCodeAt(0) < 65){
 						color = getRandomColors();
 					}else{
 						colorIndex = Math.floor((c.charCodeAt(0) - 65) % params.alphabetcolors.length);
