@@ -47,6 +47,7 @@ nla.directive('ngLetterAvatar', ['defaultSettings',function(defaultSettings) {
 						defaultBorder:defaultSettings.defaultBorder,
 						shape:attrs.shape,
 						alphabetcolors: scope.alphabetcolors || defaultSettings.alphabetcolors,
+						boxColor : isNotNull(attrs.boxColor) ? attrs.boxColor : null,
 						colorFunc : scope.colorFunc()
 					};
 					
@@ -55,7 +56,9 @@ nla.directive('ngLetterAvatar', ['defaultSettings',function(defaultSettings) {
 					var colorIndex = '';
 					var color = '';
 					
-					if ( params.colorFunc ) {
+					if (params.boxColor != null){
+						color = params.boxColor;
+					}else if (params.colorFunc) {
 						color = params.colorFunc(c);
 					}else if(c.charCodeAt(0) < 65){
 						color = getRandomColors();
