@@ -1,8 +1,7 @@
-# ng-letter-avatar [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/uttesh/ngletteravatar?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
-
+# ng-letter-avatar 
 [![Build Status](https://travis-ci.org/uttesh/ngletteravatar.svg?branch=master)](https://travis-ci.org/uttesh/ngletteravatar)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/uttesh/ngletteravatar?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
 
-[![Join the chat at https://gitter.im/uttesh/ngletteravatar](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/uttesh/ngletteravatar?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 AngularJS directive for simple data avatar like gmail/inbox. 
 <a href="http://uttesh.github.io/ngletteravatar/">demo</a>
