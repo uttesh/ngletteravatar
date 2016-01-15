@@ -19,7 +19,7 @@ nla.constant('defaultSettings', {
 	charCount:1,
 	fontFamily:'HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica, Arial,Lucida Grande, sans-serif',
 	base:'data:image/svg+xml;base64,',
-	radius:'border-radius:30px;'
+	radius:'border-radius:50%;'
 
 });
 
