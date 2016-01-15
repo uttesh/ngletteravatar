@@ -1,0 +1,27 @@
+{
+  "name": "ngletteravatar",
+  "version": "4.0.0",
+  "description": "directive for the letter avatar for the given string like gmail, first letter of the given data will be the avatar",
+  "main": "ngletteravatar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uttesh/ngletteravatar.git"
+  },
+  "keywords": [
+    "ngletteravatar",
+    "letter",
+    "avatart",
+    "gmail",
+    "like",
+    "letter"
+  ],
+  "author": "Uttesh Kumar T.H.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uttesh/ngletteravatar/issues"
+  },
+  "homepage": "https://github.com/uttesh/ngletteravatar#readme"
+}
