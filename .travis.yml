@@ -2,5 +2,5 @@ language: node_js
 node_js:
   - "2.11.3"
 before_script:
-  - npm install -g gulp
+  - npm install -g gulp gulp-util gulp-concat gulp-uglify gulp-ngmin gulp-ng-annotate
 script: gulp
