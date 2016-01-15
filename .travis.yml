@@ -2,10 +2,5 @@ language: node_js
 node_js:
   - "0.11"
 before_script:
-  - npm install gulp 
-  - npm install gulp-util 
-  - npm install gulp-concat 
-  - npm install gulp-uglify 
-  - npm install gulp-ngmin 
-  - npm install gulp-ng-annotate
+  - npm install gulp gulp-util gulp-concat gulp-uglify gulp-ngmin gulp-ng-annotate
 script: gulp
