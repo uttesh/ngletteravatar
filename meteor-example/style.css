@@ -1,0 +1,14 @@
+body {
+  background: #eee;
+}
+.single-person {
+  display: inline-block;
+  margin-right: 25px;
+}
+.person-avatar {
+  float: left;
+}
+.avatar {
+  border-radius: 50%;
+  border: 5px solid white;
+}

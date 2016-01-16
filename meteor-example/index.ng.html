@@ -1,0 +1,14 @@
+<div ng-controller="PeopleCtrl">
+  <ul>
+    <li ng-repeat="person in people" class="single-person">
+      <div class="person-avatar">
+        <ng-letter-avatar ng-show="!person.avatar" data="{{person.firstname}}" shape="round" avatarborder="true"></ng-letter-avatar>
+        <img ng-show="person.avatar" src="{{person.avatar}}" alt="{{person.firstname}}" class="avatar" width="50">
+      </div>
+      <div class="person-info">
+        <span>{{person.firstname}}</span>
+        <span>{{person.lastname}}</span>
+      </div>
+    </li>
+  </ul>
+</div>
