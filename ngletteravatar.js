@@ -156,8 +156,6 @@ nla.directive('ngLetterAvatar', ['defaultSettings',function(defaultSettings) {
         * Adrien Kou ==> AK
 		*/
 		function determineCharacterNumbers(isMultiple, avatarData, charCount){
-			// console.log("determineCharacterNumbers > starting...");
-			// console.log(isMultiple);
 			var words = [],
 				valReturn = null;
 			if(!isMultiple){
@@ -165,7 +163,6 @@ nla.directive('ngLetterAvatar', ['defaultSettings',function(defaultSettings) {
 			}
 			else{
 				words = avatarData.split(" ");
-				// console.log(words)
 				for (var i = 0; i < words.length; i++) {
 					if(words.length >= 2){
 						// we pop particle names "De", "Of", "The", "Van" etc...
@@ -179,14 +176,9 @@ nla.directive('ngLetterAvatar', ['defaultSettings',function(defaultSettings) {
 
 					}
 				};
-				// console.log(words);
+
 				// we add something like ['A', 'V'] that becomes AV
 				valReturn = words.join('').substr(0, charCount).toUpperCase();
-				// split(" ")
-				// array.length == 2
-				// words.length == 2 && index == 1 --> suppr
-				// words.length == 3 && index == 1 --> suppr
-				// array.length ==1 -> return one
 			}
 			return valReturn;
 		}
