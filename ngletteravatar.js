@@ -45,14 +45,15 @@ nla.directive('ngLetterAvatar', ['defaultSettings',function(defaultSettings) {
 						avatardefaultBorder:attrs.avatarborder,
 						defaultBorder:defaultSettings.defaultBorder,
 						shape:attrs.shape,
-						alphabetcolors: scope.alphabetcolors || defaultSettings.alphabetcolors
+						alphabetcolors: scope.alphabetcolors || defaultSettings.alphabetcolors,
+						multiWord:attrs.multiWorld
 					};
 					
 					if(attrs.alphabetcolors){
 						console.log(params.alphabetcolors.length);
 					}
 
-					var c = params.data.substr(0, params.charCount).toUpperCase();
+					var c = determineCharacterNumbers(params.multiWord, params.data, params.charCount);
 					var cobj = getCharacterObject(c,params.textColor,params.fontFamily,params.fontWeight,params.fontsize);
 					var colorIndex = '';
 					var color = '';
@@ -142,5 +143,44 @@ nla.directive('ngLetterAvatar', ['defaultSettings',function(defaultSettings) {
 								});
 				
 			return textTag;
+		}
+
+		/**
+		* determineCharacterNumbers will determine the number of characters in  case of multiwords
+		* (with charCount2)
+		* uttesh Ranjit UR
+        * Aidan Vandier Sat ==> AV
+        * Gael Magma Do Borneo ==> GM
+        * Adrian Di Bisumbio ==> AB
+        * Antoine ==> AN
+        * Antoine Kouroki ==> AK
+        * Adrien Kou ==> AK
+		*/
+		function determineCharacterNumbers(isMultiple, avatarData, charCount){
+			var words = [],
+				valReturn = null;
+			if(!isMultiple){
+				valReturn = avatarData.substr(0, charCount).toUpperCase();
+			}
+			else{
+				words = avatarData.split(" ");
+				for (var i = 0; i < words.length; i++) {
+					if(words.length >= 2){
+						// we pop particle names "De", "Of", "The", "Van" etc...
+						if((i != 0) && ( words[i].length === 2 || words[i].length === 3)){
+							if(i != words.length - 1){
+								words.splice(i,1);
+							}
+						}
+
+						words[i] = words[i].substr(0,1).toUpperCase();
+
+					}
+				};
+
+				// we add something like ['A', 'V'] that becomes AV
+				valReturn = words.join('').substr(0, charCount).toUpperCase();
+			}
+			return valReturn;
 		}
     
