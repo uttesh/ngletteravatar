@@ -45,7 +45,8 @@ nla.directive('ngLetterAvatar', ['defaultSettings',function(defaultSettings) {
 						avatardefaultBorder:attrs.avatarborder,
 						defaultBorder:defaultSettings.defaultBorder,
 						shape:attrs.shape,
-						alphabetcolors: scope.alphabetcolors || defaultSettings.alphabetcolors
+						alphabetcolors: scope.alphabetcolors || defaultSettings.alphabetcolors,
+						multiWord:attrs.multiWorld
 					};
 					
 					if(attrs.alphabetcolors){
