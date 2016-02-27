@@ -28,13 +28,14 @@ nla.directive('ngLetterAvatar', ['defaultSettings',function(defaultSettings) {
                 restrict: 'AE',
 				replace: true,
 				scope: {
-					alphabetcolors: '=alphabetcolors'
+					alphabetcolors: '=alphabetcolors',
+          data: '='
 				},
                 link: function(scope, element, attrs) {
 					
 					var params = {
 						charCount:isNotNull(attrs.charcount) ? attrs.charcount : defaultSettings.charCount,
-						data:attrs.data,
+						data:scope.data,
 						textColor:defaultSettings.textColor,
 						height:isNotNull(attrs.height) ? attrs.height : defaultSettings.height,
 						width:isNotNull(attrs.width) ? attrs.width : defaultSettings.width,
