@@ -36,15 +36,11 @@ NO NEED TO INJECT in controller directly use in html.
 
 
 ```
-                                <p>
-                                    
-                                    <small>
-
-                                       <ng-letter-avatar data="uttesh"></ng-letter-avatar>
-
-
-                                    </small>
-                                </p>
+<p>
+  <small>
+     <ng-letter-avatar data="uttesh"></ng-letter-avatar>
+  </small>
+</p>
 ```
 
 ## Option attirbutes
