@@ -54,7 +54,7 @@ You can affect how letteravatar operates with the following settings:
 name | default | description
 -----|---------|------------
 `alphabetcolors` | default color set | Using this attribute set the custom colors for the alphabets only.
-`charCount` | 1 | Specifies the number letters to displayed.
+`charCount` | 1 | Specifies the number of letters to displayed. to generate combined letter avatar of firstname and lastname which are separated by space then set the value to '2'
 `data` |  | input data
 `height` | 50px | set the height for the avatar
 `width` | 50px | set the width for the avatar
