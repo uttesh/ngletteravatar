@@ -1,475 +1,493 @@
 <!DOCTYPE html>
 <html ng-app="letterAvatarApp">
-<head>
-	<title>LetterAvatar</title>
-	<meta charset="utf-8">
-	<meta name="keywords" content="gmail inbox like letter icon,letter avatar, angularjs letter avatar">
+    <head>
+        <title>LetterAvatar</title>
+        <meta charset="utf-8">
+        <meta name="keywords" content="gmail inbox like letter icon,letter avatar, angularjs letter avatar">
         <meta name="description" content="directive for the letter avatar for the given string like gmail, first letter of the given data will be the avatar">
-	<link rel="icon" href="https://raw.githubusercontent.com/uttesh/ngletteravatar/master/demo/logo.png" type="image/png">
-	<script src="static/lib/jquery.js"></script>
-	<script src="static/lib/angular.js"></script>
-	<script src="static/js/ngletteravatar.min.js"></script>
-	<script src="static/js/app.js"></script>
-	<link rel="stylesheet" href="static/css/bootstrap/css/bootstrap-flatly.css" />
+        <link rel="icon" href="https://raw.githubusercontent.com/uttesh/ngletteravatar/master/demo/logo.png" type="image/png">
+        <script src="static/lib/jquery.js"></script>
+        <script src="static/lib/angular.js"></script>
+        <script src="static/js/ngletteravatar.js"></script>
+        <script src="static/js/app.js"></script>
+        <link rel="stylesheet" href="static/css/bootstrap/css/bootstrap-flatly.css" />
 
-</head>
+    </head>
 
-<body style="font-size: 14px;" >
-<div class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-		  <div style="padding-bottom:20px">
-		  <div class="pull-left">
-          <ng-letter-avatar data="la" charCount="2" shape="round" avatarborder="true"></ng-letter-avatar> 
-		  </div>
-		   <div class="pull-right">
-		  <a class="navbar-brand" style="height: inherit;" href="#">LetterAvatar</a>
-		  </div>
-		  </div>
+    <body style="font-size: 14px;" >
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div style="padding-bottom:20px">
+                        <div class="pull-left">
+                            <ng-letter-avatar data="la" charCount="2" shape="round" avatarborder="true"></ng-letter-avatar> 
+                        </div>
+                        <div class="pull-right">
+                            <a class="navbar-brand" style="height: inherit;" href="#">LetterAvatar</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <a href="https://github.com/uttesh/ngletteravatar">
+                    <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+            </div>
         </div>
-	
+        <div class="container" >
 
-<a href="https://github.com/uttesh/ngletteravatar">
-	<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
-      </div>
-</div>
-<div class="container" >
+            <!-- Main jumbotron for a primary marketing message or call to action -->
+            <div class="jumbotron" style="margin-top:50px">
+                <div class="container">
+                    <h1>ng-letter-avatar!</h1>
+                    <p>directive for the letter avatar for the given string like gmail, first letter of the given data will be the avatar</p>
+                    <p><a class="btn btn-primary btn-lg" role="button" href="https://codeload.github.com/uttesh/ngletteravatar/zip/master">Download</a></p>
+                </div>
+            </div>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron" style="margin-top:50px">
-      <div class="container">
-        <h1>ng-letter-avatar!</h1>
-        <p>directive for the letter avatar for the given string like gmail, first letter of the given data will be the avatar</p>
-        <p><a class="btn btn-primary btn-lg" role="button" href="https://codeload.github.com/uttesh/ngletteravatar/zip/master">Download</a></p>
-      </div>
-    </div>
-	
-	<div class="jumbotron">
-      <div class="container">
-        <h1>Default shape</h1>
-		<section>
-                <ng-letter-avatar data="a"></ng-letter-avatar>
-		<ng-letter-avatar data="b"></ng-letter-avatar>
-		<ng-letter-avatar data="c"></ng-letter-avatar>
-		<ng-letter-avatar data="d"></ng-letter-avatar>
-		<ng-letter-avatar data="e"></ng-letter-avatar>
-		<ng-letter-avatar data="f"></ng-letter-avatar>
-		<ng-letter-avatar data="g"></ng-letter-avatar>
-		<ng-letter-avatar data="h"></ng-letter-avatar>
-		<ng-letter-avatar data="i"></ng-letter-avatar>
-		
-		</section>
-		<section style="margin-top:10px">
-		<ng-letter-avatar data="j"></ng-letter-avatar>
-		<ng-letter-avatar data="k" ></ng-letter-avatar>
-		<ng-letter-avatar data="l"></ng-letter-avatar>
-		<ng-letter-avatar data="m"></ng-letter-avatar>
-		<ng-letter-avatar data="n"></ng-letter-avatar>
-		<ng-letter-avatar data="o"></ng-letter-avatar>
-		<ng-letter-avatar data="p"></ng-letter-avatar>
-		<ng-letter-avatar data="q"></ng-letter-avatar>
-		<ng-letter-avatar data="r"></ng-letter-avatar>
-		
-		</section >
-		<section style="margin-top:10px">
-		
-		<ng-letter-avatar data="s"></ng-letter-avatar>
-		<ng-letter-avatar data="t"></ng-letter-avatar>
-		<ng-letter-avatar data="u"></ng-letter-avatar>
-		<ng-letter-avatar data="v"></ng-letter-avatar>
-		<ng-letter-avatar data="w"></ng-letter-avatar>
-		<ng-letter-avatar data="x"></ng-letter-avatar>
-		<ng-letter-avatar data="y"></ng-letter-avatar>
-		<ng-letter-avatar data="z"></ng-letter-avatar>
-		</section >
-		
-		<h1>avatar border styles</h1>
-		<section>
-		<h4>avatarborder="true" :</h4> 
-		<ng-letter-avatar data="a" avatarborder="true" ></ng-letter-avatar>
-		<ng-letter-avatar data="b" avatarborder="true" ></ng-letter-avatar>
-		<ng-letter-avatar data="c" avatarborder="true" ></ng-letter-avatar>
-		<ng-letter-avatar data="d" avatarborder="true" ></ng-letter-avatar>
-		<ng-letter-avatar data="e" avatarborder="true" ></ng-letter-avatar>
-		<ng-letter-avatar data="f" avatarborder="true" ></ng-letter-avatar>
-	        <ng-letter-avatar data="g" avatarborder="true" ></ng-letter-avatar>
-		<ng-letter-avatar data="h" avatarborder="true" ></ng-letter-avatar>
-		<ng-letter-avatar data="i" avatarborder="true" ></ng-letter-avatar>
-		<ng-letter-avatar data="j" avatarborder="true" ></ng-letter-avatar>
-		<h4>avatarcustomborder="border:5px solid black" :</h4> <ng-letter-avatar data="A" avatarcustomborder="border:5px solid black"></ng-letter-avatar>
-		</section>
-		
-	    <h1>Custom alphabet colors</h1>
-		<section ng-controller="letterAvatarCtrl">
-		<h4>alphabetcolors=array of the colors</h4> 
-		<ng-letter-avatar data="a" alphabetcolors="customColors" ></ng-letter-avatar>
-		<ng-letter-avatar data="b" alphabetcolors="customColors"  ></ng-letter-avatar>
-		<ng-letter-avatar data="c" alphabetcolors="customColors"  ></ng-letter-avatar>
-		<ng-letter-avatar data="d" alphabetcolors="customColors" ></ng-letter-avatar>
-		<ng-letter-avatar data="e" alphabetcolors="customColors" ></ng-letter-avatar>
-		<ng-letter-avatar data="f" alphabetcolors="customColors" ></ng-letter-avatar>
-	        <ng-letter-avatar data="g" alphabetcolors="customColors"  ></ng-letter-avatar>
-		<ng-letter-avatar data="h" alphabetcolors="customColors"  ></ng-letter-avatar>
-		<ng-letter-avatar data="i" alphabetcolors="customColors"  ></ng-letter-avatar>
-		<ng-letter-avatar data="j" alphabetcolors="customColors"  ></ng-letter-avatar>
-		</section>
-		
-		
-		<h1>Numbers</h1>
-		<section style="margin-top:10px">
-        <ng-letter-avatar data="0" ></ng-letter-avatar>
-		<ng-letter-avatar data="1" ></ng-letter-avatar>
-		<ng-letter-avatar data="2" ></ng-letter-avatar>
-		<ng-letter-avatar data="3" ></ng-letter-avatar>
-		<ng-letter-avatar data="4" ></ng-letter-avatar>
-		<ng-letter-avatar data="5" ></ng-letter-avatar>
-		<ng-letter-avatar data="6" ></ng-letter-avatar>
-		<ng-letter-avatar data="7" ></ng-letter-avatar>
-		<ng-letter-avatar data="8" ></ng-letter-avatar>
-		<ng-letter-avatar data="9" ></ng-letter-avatar>
-		</section>
-	     
-		<h1>Special characters</h1>
-	<section style="margin-top:10px">
-        <ng-letter-avatar data="!" ></ng-letter-avatar>
-		<ng-letter-avatar data="@" ></ng-letter-avatar>
-		<ng-letter-avatar data="#" ></ng-letter-avatar>
-		<ng-letter-avatar data="$" ></ng-letter-avatar>
-		<ng-letter-avatar data="%" ></ng-letter-avatar>
-		<ng-letter-avatar data="^" ></ng-letter-avatar>
-		<ng-letter-avatar data="&" ></ng-letter-avatar>
-		<ng-letter-avatar data="*" ></ng-letter-avatar>
-		<ng-letter-avatar data="(" ></ng-letter-avatar>
-		</section>
-		
-		<section style="margin-top:10px">
-		<ng-letter-avatar data=")" ></ng-letter-avatar>
-		<ng-letter-avatar data="_" ></ng-letter-avatar>
-		<ng-letter-avatar data="-" ></ng-letter-avatar>
-		<ng-letter-avatar data="+" ></ng-letter-avatar>
-		<ng-letter-avatar data="=" ></ng-letter-avatar>
-		<ng-letter-avatar data="{" ></ng-letter-avatar>
-		<ng-letter-avatar data="}" ></ng-letter-avatar>
-		<ng-letter-avatar data="[" ></ng-letter-avatar>
-		<ng-letter-avatar data="]" ></ng-letter-avatar>
-		</section>
-		
-		<section style="margin-top:10px">
-		<ng-letter-avatar data="|" ></ng-letter-avatar>
-		<ng-letter-avatar data="\" ></ng-letter-avatar>
-		<ng-letter-avatar data=";" ></ng-letter-avatar>
-		<ng-letter-avatar data=":" ></ng-letter-avatar>
-		<ng-letter-avatar data="'" ></ng-letter-avatar>
-		<ng-letter-avatar data="<" ></ng-letter-avatar>
-		<ng-letter-avatar data=">" ></ng-letter-avatar>
-		<ng-letter-avatar data="?" ></ng-letter-avatar>
-		<ng-letter-avatar data="," ></ng-letter-avatar>
-		</section>
-		
-		<section style="margin-top:10px">
-		<ng-letter-avatar data="." ></ng-letter-avatar>
-		<ng-letter-avatar data="/" ></ng-letter-avatar>
-		<ng-letter-avatar data="~" ></ng-letter-avatar>
-		</section>	
+            <div class="jumbotron">
+                <div class="container">
+                    <h1>Default shape</h1>
+                    <section>
+                        <ng-letter-avatar data="a"></ng-letter-avatar>
+                        <ng-letter-avatar data="b"></ng-letter-avatar>
+                        <ng-letter-avatar data="c"></ng-letter-avatar>
+                        <ng-letter-avatar data="d"></ng-letter-avatar>
+                        <ng-letter-avatar data="e"></ng-letter-avatar>
+                        <ng-letter-avatar data="f"></ng-letter-avatar>
+                        <ng-letter-avatar data="g"></ng-letter-avatar>
+                        <ng-letter-avatar data="h"></ng-letter-avatar>
+                        <ng-letter-avatar data="i"></ng-letter-avatar>
 
-		<h1>Chinese</h1>
-		<section style="margin-top:10px">
-		<ng-letter-avatar data="餐‎" ></ng-letter-avatar>
-		<ng-letter-avatar data="飲‎" ></ng-letter-avatar>
-		<ng-letter-avatar data="業‎" ></ng-letter-avatar>
-		<ng-letter-avatar data="電" ></ng-letter-avatar>
-		</section>
-		
-		<h1>ಕನ್ನಡ ಅಕ್ಷರಮಾಲೆ </h1>
-		<section style="margin-top:10px">
-		<ng-letter-avatar data="ಅ‎" ></ng-letter-avatar>
-		<ng-letter-avatar data="ಆ‎" ></ng-letter-avatar>
-		<ng-letter-avatar data="ಇ‎" ></ng-letter-avatar>
-		<ng-letter-avatar data="ಈ‎" ></ng-letter-avatar>
-		<ng-letter-avatar data="ಉ‎" ></ng-letter-avatar>
-		<ng-letter-avatar data="ಊ‎" ></ng-letter-avatar>
-		<ng-letter-avatar data="ಋ‎" ></ng-letter-avatar>
-		<ng-letter-avatar data="ೠ‎" ></ng-letter-avatar>
-		<ng-letter-avatar data="ಎ‎" ></ng-letter-avatar>
-		<ng-letter-avatar data="ಏ‎" ></ng-letter-avatar>
-		<ng-letter-avatar data="ಐ" ></ng-letter-avatar>
-		<ng-letter-avatar data="ಒ" ></ng-letter-avatar>
-		<ng-letter-avatar data="ಓ" ></ng-letter-avatar>
-		<ng-letter-avatar data="ಔ" ></ng-letter-avatar>
-		<ng-letter-avatar data="ಅಂ" charCount="2" ></ng-letter-avatar>
-		<ng-letter-avatar data="ಅಃ" charCount="2"></ng-letter-avatar>
-		</section>
-		
-		<h1>Round shape</h1>
-		<section>
-        <ng-letter-avatar data="a" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="b" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="c" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="d" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="e" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="f" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="g" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="h" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="i" shape="round"></ng-letter-avatar>
-	
-		</section>
-		<section style="margin-top:10px">
-	        <ng-letter-avatar data="j" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="k" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="l" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="m" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="n" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="o" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="p" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="q" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="r" shape="round"></ng-letter-avatar>
-		
-		</section >
-		<section style="margin-top:10px">
-		
-		<ng-letter-avatar data="s" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="t" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="u" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="v" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="w" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="x" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="y" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="z" shape="round"></ng-letter-avatar>
-		</section >
-		
-		<h1>Numbers</h1>
-		<section>
-        <ng-letter-avatar data="0" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="1" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="2" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="3" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="4" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="5" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="6" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="7" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="8" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="9" shape="round"></ng-letter-avatar>
-		</section>
-		
-		<h1>Special characters</h1>
-		<section>
-        <ng-letter-avatar data="!" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="@" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="#" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="$" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="%" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="^" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="&" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="*" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="(" shape="round"></ng-letter-avatar>
-		</section>
-		
-		<section style="margin-top:10px">
-		<ng-letter-avatar data=")" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="_" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="-" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="+" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="=" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="{" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="}" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="[" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="]" shape="round"></ng-letter-avatar>
-		</section>
-		
-		<section style="margin-top:10px">
-		<ng-letter-avatar data="|" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="\" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data=";" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data=":" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="'" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="<" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data=">" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="?" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="," shape="round"></ng-letter-avatar>
-		</section>
-		<section style="margin-top:10px">
-		<ng-letter-avatar data="." shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="/" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="~" shape="round"></ng-letter-avatar>
-		</section>
-		<h1>avatar border styles</h1>
-		<section>
-		<h4>avatarborder="true" :</h4> 
-		<ng-letter-avatar data="a" avatarborder="true" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="b" avatarborder="true" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="c" avatarborder="true" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="d" avatarborder="true" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="e" avatarborder="true" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="f" avatarborder="true" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="g" avatarborder="true" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="h" avatarborder="true" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="i" avatarborder="true" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="j" avatarborder="true" shape="round"></ng-letter-avatar>
-		<h4>avatarcustomborder="border:5px solid black" :</h4> <ng-letter-avatar data="A" shape="round" avatarcustomborder="border:5px solid black"></ng-letter-avatar>
-		</section>
-		<h1>Chinese</h1>
-		<section style="margin-top:10px">
-		<ng-letter-avatar data="餐‎" shape="round" avatarborder="true"></ng-letter-avatar>
-		<ng-letter-avatar data="飲‎" shape="round" avatarborder="true"></ng-letter-avatar>
-		<ng-letter-avatar data="業‎" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="電" shape="round"></ng-letter-avatar>
-		</section>
-		
-		<h1>ಕನ್ನಡ ಅಕ್ಷರಮಾಲೆ </h1>
-		<section style="margin-top:10px">
-		<ng-letter-avatar data="ಅ‎" shape="round" avatarborder="true"></ng-letter-avatar>
-		<ng-letter-avatar data="ಆ‎" shape="round" avatarborder="true"></ng-letter-avatar>
-		<ng-letter-avatar data="ಇ‎" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="ಈ‎" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="ಉ‎" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="ಊ‎" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="ಋ‎" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="ೠ‎" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="ಎ‎" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="ಏ‎" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="ಐ" shape="round" ></ng-letter-avatar>
-		<ng-letter-avatar data="ಒ"  shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="ಓ"  shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="ಔ" shape="round" ></ng-letter-avatar>
-		<ng-letter-avatar data="ಅಂ" charCount="2" shape="round"></ng-letter-avatar>
-		<ng-letter-avatar data="ಅಃ" charCount="2" shape="round"></ng-letter-avatar>
-		</section>	
+                    </section>
+                    <section style="margin-top:10px">
+                        <ng-letter-avatar data="j"></ng-letter-avatar>
+                        <ng-letter-avatar data="k" ></ng-letter-avatar>
+                        <ng-letter-avatar data="l"></ng-letter-avatar>
+                        <ng-letter-avatar data="m"></ng-letter-avatar>
+                        <ng-letter-avatar data="n"></ng-letter-avatar>
+                        <ng-letter-avatar data="o"></ng-letter-avatar>
+                        <ng-letter-avatar data="p"></ng-letter-avatar>
+                        <ng-letter-avatar data="q"></ng-letter-avatar>
+                        <ng-letter-avatar data="r"></ng-letter-avatar>
 
-				<h1>Chinese</h1>
-		<section style="margin-top:10px">
-		<ng-letter-avatar data="餐‎" height="20" width="20" shape="round" avatarborder="true"></ng-letter-avatar>
-		<ng-letter-avatar data="A‎" height="20" width="20" fontsize="16" shape="round" avatarborder="true"></ng-letter-avatar>
-		
-		</section>
-		
-      </div>
-    </div>
-	
-	<div class="jumbotron">
-      <div class="container">
-        <h1>Quick start</h1>
-         <p>
-		 
-<pre>
+                    </section >
+                    <section style="margin-top:10px">
+
+                        <ng-letter-avatar data="s"></ng-letter-avatar>
+                        <ng-letter-avatar data="t"></ng-letter-avatar>
+                        <ng-letter-avatar data="u"></ng-letter-avatar>
+                        <ng-letter-avatar data="v"></ng-letter-avatar>
+                        <ng-letter-avatar data="w"></ng-letter-avatar>
+                        <ng-letter-avatar data="x"></ng-letter-avatar>
+                        <ng-letter-avatar data="y"></ng-letter-avatar>
+                        <ng-letter-avatar data="z"></ng-letter-avatar>
+                    </section >
+
+                    <h1>avatar border styles</h1>
+                    <section>
+                        <h4>avatarborder="true" :</h4> 
+                        <ng-letter-avatar data="a" avatarborder="true" ></ng-letter-avatar>
+                        <ng-letter-avatar data="b" avatarborder="true" ></ng-letter-avatar>
+                        <ng-letter-avatar data="c" avatarborder="true" ></ng-letter-avatar>
+                        <ng-letter-avatar data="d" avatarborder="true" ></ng-letter-avatar>
+                        <ng-letter-avatar data="e" avatarborder="true" ></ng-letter-avatar>
+                        <ng-letter-avatar data="f" avatarborder="true" ></ng-letter-avatar>
+                        <ng-letter-avatar data="g" avatarborder="true" ></ng-letter-avatar>
+                        <ng-letter-avatar data="h" avatarborder="true" ></ng-letter-avatar>
+                        <ng-letter-avatar data="i" avatarborder="true" ></ng-letter-avatar>
+                        <ng-letter-avatar data="j" avatarborder="true" ></ng-letter-avatar>
+                        <h4>avatarcustomborder="border:5px solid black" :</h4> <ng-letter-avatar data="A" avatarcustomborder="border:5px solid black"></ng-letter-avatar>
+                    </section>
+
+                    <h1>Custom alphabet colors</h1>
+                    <section ng-controller="letterAvatarCtrl">
+                        <h4>alphabetcolors=array of the colors</h4> 
+                        <ng-letter-avatar data="a" alphabetcolors="customColors" ></ng-letter-avatar>
+                        <ng-letter-avatar data="b" alphabetcolors="customColors"  ></ng-letter-avatar>
+                        <ng-letter-avatar data="c" alphabetcolors="customColors"  ></ng-letter-avatar>
+                        <ng-letter-avatar data="d" alphabetcolors="customColors" ></ng-letter-avatar>
+                        <ng-letter-avatar data="e" alphabetcolors="customColors" ></ng-letter-avatar>
+                        <ng-letter-avatar data="f" alphabetcolors="customColors" ></ng-letter-avatar>
+                        <ng-letter-avatar data="g" alphabetcolors="customColors"  ></ng-letter-avatar>
+                        <ng-letter-avatar data="h" alphabetcolors="customColors"  ></ng-letter-avatar>
+                        <ng-letter-avatar data="i" alphabetcolors="customColors"  ></ng-letter-avatar>
+                        <ng-letter-avatar data="j" alphabetcolors="customColors"  ></ng-letter-avatar>
+                    </section>
+
+
+                    <h1>Numbers</h1>
+                    <section style="margin-top:10px">
+                        <ng-letter-avatar data="0" ></ng-letter-avatar>
+                        <ng-letter-avatar data="1" ></ng-letter-avatar>
+                        <ng-letter-avatar data="2" ></ng-letter-avatar>
+                        <ng-letter-avatar data="3" ></ng-letter-avatar>
+                        <ng-letter-avatar data="4" ></ng-letter-avatar>
+                        <ng-letter-avatar data="5" ></ng-letter-avatar>
+                        <ng-letter-avatar data="6" ></ng-letter-avatar>
+                        <ng-letter-avatar data="7" ></ng-letter-avatar>
+                        <ng-letter-avatar data="8" ></ng-letter-avatar>
+                        <ng-letter-avatar data="9" ></ng-letter-avatar>
+                    </section>
+
+                    <h1>Special characters</h1>
+                    <section style="margin-top:10px">
+                        <ng-letter-avatar data="!" ></ng-letter-avatar>
+                        <ng-letter-avatar data="@" ></ng-letter-avatar>
+                        <ng-letter-avatar data="#" ></ng-letter-avatar>
+                        <ng-letter-avatar data="$" ></ng-letter-avatar>
+                        <ng-letter-avatar data="%" ></ng-letter-avatar>
+                        <ng-letter-avatar data="^" ></ng-letter-avatar>
+                        <ng-letter-avatar data="&" ></ng-letter-avatar>
+                        <ng-letter-avatar data="*" ></ng-letter-avatar>
+                        <ng-letter-avatar data="(" ></ng-letter-avatar>
+                    </section>
+
+                    <section style="margin-top:10px">
+                        <ng-letter-avatar data=")" ></ng-letter-avatar>
+                        <ng-letter-avatar data="_" ></ng-letter-avatar>
+                        <ng-letter-avatar data="-" ></ng-letter-avatar>
+                        <ng-letter-avatar data="+" ></ng-letter-avatar>
+                        <ng-letter-avatar data="=" ></ng-letter-avatar>
+                        <ng-letter-avatar data="{" ></ng-letter-avatar>
+                        <ng-letter-avatar data="}" ></ng-letter-avatar>
+                        <ng-letter-avatar data="[" ></ng-letter-avatar>
+                        <ng-letter-avatar data="]" ></ng-letter-avatar>
+                    </section>
+
+                    <section style="margin-top:10px">
+                        <ng-letter-avatar data="|" ></ng-letter-avatar>
+                        <ng-letter-avatar data="\" ></ng-letter-avatar>
+                                          <ng-letter-avatar data=";" ></ng-letter-avatar>
+                        <ng-letter-avatar data=":" ></ng-letter-avatar>
+                        <ng-letter-avatar data="'" ></ng-letter-avatar>
+                        <ng-letter-avatar data="<" ></ng-letter-avatar>
+                        <ng-letter-avatar data=">" ></ng-letter-avatar>
+                        <ng-letter-avatar data="?" ></ng-letter-avatar>
+                        <ng-letter-avatar data="," ></ng-letter-avatar>
+                    </section>
+
+                    <section style="margin-top:10px">
+                        <ng-letter-avatar data="." ></ng-letter-avatar>
+                        <ng-letter-avatar data="/" ></ng-letter-avatar>
+                        <ng-letter-avatar data="~" ></ng-letter-avatar>
+                    </section>	
+
+                    <h1>Chinese</h1>
+                    <section style="margin-top:10px">
+                        <ng-letter-avatar data="餐‎" ></ng-letter-avatar>
+                        <ng-letter-avatar data="飲‎" ></ng-letter-avatar>
+                        <ng-letter-avatar data="業‎" ></ng-letter-avatar>
+                        <ng-letter-avatar data="電" ></ng-letter-avatar>
+                    </section>
+
+                    <h1>ಕನ್ನಡ ಅಕ್ಷರಮಾಲೆ </h1>
+                    <section style="margin-top:10px">
+                        <ng-letter-avatar data="ಅ‎" ></ng-letter-avatar>
+                        <ng-letter-avatar data="ಆ‎" ></ng-letter-avatar>
+                        <ng-letter-avatar data="ಇ‎" ></ng-letter-avatar>
+                        <ng-letter-avatar data="ಈ‎" ></ng-letter-avatar>
+                        <ng-letter-avatar data="ಉ‎" ></ng-letter-avatar>
+                        <ng-letter-avatar data="ಊ‎" ></ng-letter-avatar>
+                        <ng-letter-avatar data="ಋ‎" ></ng-letter-avatar>
+                        <ng-letter-avatar data="ೠ‎" ></ng-letter-avatar>
+                        <ng-letter-avatar data="ಎ‎" ></ng-letter-avatar>
+                        <ng-letter-avatar data="ಏ‎" ></ng-letter-avatar>
+                        <ng-letter-avatar data="ಐ" ></ng-letter-avatar>
+                        <ng-letter-avatar data="ಒ" ></ng-letter-avatar>
+                        <ng-letter-avatar data="ಓ" ></ng-letter-avatar>
+                        <ng-letter-avatar data="ಔ" ></ng-letter-avatar>
+                        <ng-letter-avatar data="ಅಂ" charCount="2" ></ng-letter-avatar>
+                        <ng-letter-avatar data="ಅಃ" charCount="2"></ng-letter-avatar>
+                    </section>
+
+                        <h1>Round shape</h1>
+                        <section>
+                            <ng-letter-avatar data="a" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="b" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="c" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="d" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="e" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="f" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="g" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="h" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="i" shape="round"></ng-letter-avatar>
+
+                        </section>
+                        <section style="margin-top:10px">
+                            <ng-letter-avatar data="j" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="k" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="l" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="m" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="n" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="o" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="p" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="q" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="r" shape="round"></ng-letter-avatar>
+
+                        </section >
+                        <section style="margin-top:10px">
+
+                            <ng-letter-avatar data="s" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="t" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="u" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="v" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="w" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="x" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="y" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="z" shape="round"></ng-letter-avatar>
+                        </section >
+
+                        <h1>Numbers</h1>
+                        <section>
+                            <ng-letter-avatar data="0" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="1" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="2" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="3" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="4" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="5" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="6" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="7" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="8" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="9" shape="round"></ng-letter-avatar>
+                        </section>
+
+                        <h1>Special characters</h1>
+                        <section>
+                            <ng-letter-avatar data="!" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="@" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="#" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="$" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="%" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="^" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="&" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="*" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="(" shape="round"></ng-letter-avatar>
+                        </section>
+
+                        <section style="margin-top:10px">
+                            <ng-letter-avatar data=")" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="_" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="-" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="+" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="=" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="{" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="}" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="[" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="]" shape="round"></ng-letter-avatar>
+                        </section>
+
+                        <section style="margin-top:10px">
+                            <ng-letter-avatar data="|" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="\" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data=";" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data=":" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="'" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="<" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data=">" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="?" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="," shape="round"></ng-letter-avatar>
+                        </section>
+                        <section style="margin-top:10px">
+                            <ng-letter-avatar data="." shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="/" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="~" shape="round"></ng-letter-avatar>
+                        </section>
+                        <h1>avatar border styles</h1>
+                        <section>
+                            <h4>avatarborder="true" :</h4> 
+                            <ng-letter-avatar data="a" avatarborder="true" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="b" avatarborder="true" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="c" avatarborder="true" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="d" avatarborder="true" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="e" avatarborder="true" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="f" avatarborder="true" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="g" avatarborder="true" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="h" avatarborder="true" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="i" avatarborder="true" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="j" avatarborder="true" shape="round"></ng-letter-avatar>
+                            <h4>avatarcustomborder="border:5px solid black" :</h4> <ng-letter-avatar data="A" shape="round" avatarcustomborder="border:5px solid black"></ng-letter-avatar>
+                        </section>
+                        <h1>Chinese</h1>
+                        <section style="margin-top:10px">
+                            <ng-letter-avatar data="餐‎" shape="round" avatarborder="true"></ng-letter-avatar>
+                            <ng-letter-avatar data="飲‎" shape="round" avatarborder="true"></ng-letter-avatar>
+                            <ng-letter-avatar data="業‎" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="電" shape="round"></ng-letter-avatar>
+                        </section>
+
+                        <h1>ಕನ್ನಡ ಅಕ್ಷರಮಾಲೆ </h1>
+                        <section style="margin-top:10px">
+                            <ng-letter-avatar data="ಅ‎" shape="round" avatarborder="true"></ng-letter-avatar>
+                            <ng-letter-avatar data="ಆ‎" shape="round" avatarborder="true"></ng-letter-avatar>
+                            <ng-letter-avatar data="ಇ‎" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="ಈ‎" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="ಉ‎" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="ಊ‎" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="ಋ‎" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="ೠ‎" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="ಎ‎" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="ಏ‎" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="ಐ" shape="round" ></ng-letter-avatar>
+                            <ng-letter-avatar data="ಒ"  shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="ಓ"  shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="ಔ" shape="round" ></ng-letter-avatar>
+                            <ng-letter-avatar data="ಅಂ" charCount="2" shape="round"></ng-letter-avatar>
+                            <ng-letter-avatar data="ಅಃ" charCount="2" shape="round"></ng-letter-avatar>
+                        </section>	
+
+                        <h1>Chinese</h1>
+                        <section style="margin-top:10px">
+                            <ng-letter-avatar data="餐‎" height="20" width="20" shape="round" avatarborder="true"></ng-letter-avatar>
+                            <ng-letter-avatar data="A‎" height="20" width="20" fontsize="16" shape="round" avatarborder="true"></ng-letter-avatar>
+
+                        </section>
+
+                </div>
+            </div>
+
+            <div class="jumbotron">
+                <div class="container">
+                    <h1>Quick start</h1>
+                    <p>
+
+                    <pre>
 bower install ngletteravatar
-</pre> 
-<p>
-or alternatively download and include `ngletteravatar.js` after `angular.min.js`. <br>
-Add the `ngletteravatar` module as a dependency when creating your app, e.g. <br>
-</p>
-<pre>
+                    </pre> 
+                    <p>
+                        or alternatively download and include `ngletteravatar.js` after `angular.min.js`. <br>
+                        Add the `ngletteravatar` module as a dependency when creating your app, e.g. <br>
+                    </p>
+                    <pre>
 var app = angular.module('myApp', ['ngLetterAvatar']);`
+                    </pre>
+
+                    <pre>
+<pre style="margin: 0; line-height: 125%"><span style="color: #1e90ff; font-weight: bold">&lt;ng</span><span style="color: #1e90ff">-letter-avatar</span> <span style="color: #1e90ff">data=</span><span style="color: #aa5500">&quot;uttesh&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span><span style="color: #FF0000; background-color: #FFAAAA">&lt;</span>/ng-letter-avatar&gt;
+</pre> 
+result : <ng-letter-avatar data="uttesh"></ng-letter-avatar>
+
+<pre style="margin: 0; line-height: 125%"><span style="color: #1e90ff; font-weight: bold">&lt;ng</span><span style="color: #1e90ff">-letter-avatar</span>  <span style="color: #1e90ff">data=</span><span style="color: #aa5500">&quot;uttesh kumar&quot;</span> <span style="color: #1e90ff">shape=</span><span style="color: #aa5500">&quot;round&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span><span style="color: #FF0000; background-color: #FFAAAA">&lt;</span>/ng-letter-avatar&gt;
+</pre>
+ result : <ng-letter-avatar  data="uttesh kumar" shape="round"></ng-letter-avatar>
+
+<pre style="margin: 0; line-height: 125%"><span style="color: #1e90ff; font-weight: bold">&lt;ng</span><span style="color: #1e90ff">-letter-avatar</span> <span style="color: #1e90ff">data=</span><span style="color: #aa5500">&quot;uttesh&quot;</span> <span style="color: #1e90ff">avatarborder=</span><span style="color: #aa5500">&quot;true&quot;</span> <span style="color: #1e90ff">shape=</span><span style="color: #aa5500">&quot;round&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span><span style="color: #FF0000; background-color: #FFAAAA">&lt;</span>/ng-letter-avatar&gt;
+</pre>
+ result : <ng-letter-avatar data="uttesh" avatarborder="true" shape="round"></ng-letter-avatar>
+
+<pre style="margin: 0; line-height: 125%"><span style="color: #1e90ff; font-weight: bold">&lt;ng</span><span style="color: #1e90ff">-letter-avatar</span> <span style="color: #1e90ff">charCount=</span><span style="color: #aa5500">&quot;2&quot;</span> <span style="color: #1e90ff">data=</span><span style="color: #aa5500">&quot;uttesh kumar&quot;</span> <span style="color: #1e90ff">shape=</span><span style="color: #aa5500">&quot;round&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span><span style="color: #FF0000; background-color: #FFAAAA">&lt;</span>/ng-letter-avatar&gt;
+</pre>
+ result : <ng-letter-avatar charCount="2" data="uttesh kumar" shape="round"></ng-letter-avatar>
+
+<pre style="margin: 0; line-height: 125%"><span style="color: #1e90ff; font-weight: bold">&lt;ng</span><span style="color: #1e90ff">-letter-avatar</span> <span style="color: #1e90ff">avatarborder=</span><span style="color: #aa5500">&quot;true&quot;</span> <span style="color: #1e90ff">charCount=</span><span style="color: #aa5500">&quot;2&quot;</span> <span style="color: #1e90ff">data=</span><span style="color: #aa5500">&quot;uttesh kumar&quot;</span> <span style="color: #1e90ff">shape=</span><span style="color: #aa5500">&quot;round&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span><span style="color: #FF0000; background-color: #FFAAAA">&lt;</span>/ng-letter-avatar&gt;
 </pre>
 
-<pre>
-<img src="https://raw.github.com/uttesh/ngletteravatar/master/demo/sample1.png"> result : <ng-letter-avatar data="uttesh"></ng-letter-avatar>
-<img src="https://raw.github.com/uttesh/ngletteravatar/master/demo/sample2.png"> result : <ng-letter-avatar data="uttesh"shape="round"></ng-letter-avatar>
-<img src="https://raw.github.com/uttesh/ngletteravatar/master/demo/sample3.png"> result : <ng-letter-avatar data="uttesh" avatarborder="true" shape="round"></ng-letter-avatar>
+ result : <ng-letter-avatar avatarborder="true" charCount="2" data="uttesh kumar" shape="round"></ng-letter-avatar>
 
-</pre>
-attribute table
-<table class="table table-bordered table-striped">
-      <colgroup>
-        <col class="col-xs-1">
-        <col class="col-xs-7">
-      </colgroup>
-      <thead>
-        <tr>
-          <th>Attribute</th>
-          <th>Default</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-	  <tr>
-          <th scope="row">
-            <code>alphabetcolors</code>
-          </th>
-          <td>default color set</td>
-          <td>using this attribute set the custom colors for the alphabets only i.e <code> alphabetcolors="customColors"</code></td>
-        </tr>
-        <tr>
-          <th scope="row">
-            <code>charCount</code>
-          </th>
-          <td>1</td>
-          <td>Specifies the number letters to displayed.</td>
-        </tr>
-        <tr>
-          <th scope="row">
-            <code>data</code>
-          </th>
-          <td></td>
-          <td>input data</td>
-        </tr>
-        <tr>
-          <th scope="row">
-            <code>height</code>
-          </th>
-          <td>50</td>
-          <td>set the height for the avatar all values in pixel only, dont append "px"</td>
-        </tr>
-        <tr>
-          <th scope="row">
-            <code>width</code>
-          </th>
-          <td>50</td>
-          <td>set the width for the avatar all values in pixel only, dont append "px"</td>
-        </tr>
-        <tr>
-          <th scope="row">
-            <code>fontWeight</code>
-          </th>
-          <td>400</td>
-          <td>set the font weight for the avatar</td>
-        </tr>
-        <tr>
-          <th scope="row">
-            <code>fontsize</code>
-          </th>
-          <td>30</td>
-          <td>set the font size for the letter all values in pixel only, dont append "px"</td>
-        </tr>
-        <tr>
-          <th scope="row">
-            <code>shape</code>
-          </th>
-          <td>square</td>
-          <td>set the shape for the avatar. set 'round' for rounded avatars</td>
-        </tr>
-        <tr>
-          <th scope="row">
-            <code>fontFamily</code>
-          </th>
-          <td>HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica, Arial,Lucida Grande, sans-serif</td>
-          <td>set the font Family of the avatar.</td>
-        </tr>
-		<tr>
-          <th scope="row">
-            <code>avatarborder</code>
-          </th>
-          <td>false</td>
-          <td>set the avatarborder to 'true' for the white border to avatar.</td>
-        </tr>
-		<tr>
-          <th scope="row">
-            <code>avatarcustomborder</code>
-          </th>
-          <td>no default value</td>
-          <td>using this attribute set the custom style to avatar borders i.e <code> "border:5px solid black"</code></td>
-        </tr>
-		
-      </tbody>
-    </table>
+                    </pre>
+                    attribute table
+                    <table class="table table-bordered table-striped">
+                        <colgroup>
+                            <col class="col-xs-1">
+                            <col class="col-xs-7">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Attribute</th>
+                                <th>Default</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <code>alphabetcolors</code>
+                                </th>
+                                <td>default color set</td>
+                                <td>using this attribute set the custom colors for the alphabets only i.e <code> alphabetcolors="customColors"</code></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <code>charCount</code>
+                                </th>
+                                <td>1</td>
+                                <td>Specifies the number of letters to displayed. to generate combined letter avatar of firstname and lastname which are separated 
+                                by space then set the value to '2'</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <code>data</code>
+                                </th>
+                                <td></td>
+                                <td>input data</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <code>height</code>
+                                </th>
+                                <td>50</td>
+                                <td>set the height for the avatar all values in pixel only, dont append "px"</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <code>width</code>
+                                </th>
+                                <td>50</td>
+                                <td>set the width for the avatar all values in pixel only, dont append "px"</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <code>fontWeight</code>
+                                </th>
+                                <td>400</td>
+                                <td>set the font weight for the avatar</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <code>fontsize</code>
+                                </th>
+                                <td>30</td>
+                                <td>set the font size for the letter all values in pixel only, dont append "px"</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <code>shape</code>
+                                </th>
+                                <td>square</td>
+                                <td>set the shape for the avatar. set 'round' for rounded avatars</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <code>fontFamily</code>
+                                </th>
+                                <td>HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica, Arial,Lucida Grande, sans-serif</td>
+                                <td>set the font Family of the avatar.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <code>avatarborder</code>
+                                </th>
+                                <td>false</td>
+                                <td>set the avatarborder to 'true' for the white border to avatar.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <code>avatarcustomborder</code>
+                                </th>
+                                <td>no default value</td>
+                                <td>using this attribute set the custom style to avatar borders i.e <code> "border:5px solid black"</code></td>
+                            </tr>
 
-</div>
+                        </tbody>
+                    </table>
+
+                </div>
 
 
-</body>
-</html>
+                </body>
+                </html>
