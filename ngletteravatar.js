@@ -1,6 +1,6 @@
 /**
  * NG Letter Avatar is directive for AngularJS apps
- * @version v4.0.1 - 2016-03-05 * @link https://github.com/uttesh/ngletteravatar
+ * @version v4.0.2 - 2016-04-16 * @link https://github.com/uttesh/ngletteravatar
  * @author Uttesh Kumar T.H. <uttesh@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
@@ -20,8 +20,10 @@ nla.constant('defaultSettings', {
     charCount: 1,
     fontFamily: 'HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica, Arial,Lucida Grande, sans-serif',
     base: 'data:image/svg+xml;base64,',
-    radius: 'border-radius:50%;'
-
+    radius: 'border-radius:50%;',
+    custombgcolor: '',
+    dynamic: 'false',
+    rotatedeg: '0'
 });
 
 /**
@@ -34,7 +36,8 @@ nla.directive('ngLetterAvatar', ['defaultSettings', function (defaultSettings) {
             restrict: 'AE',
             replace: true,
             scope: {
-                alphabetcolors: '=alphabetcolors'
+                alphabetcolors: '=alphabetcolors',
+                data: '@'
             },
             link: function (scope, element, attrs) {
 
@@ -55,59 +58,89 @@ nla.directive('ngLetterAvatar', ['defaultSettings', function (defaultSettings) {
                     avatardefaultBorder: attrs.avatarborder,
                     defaultBorder: defaultSettings.defaultBorder,
                     shape: attrs.shape,
-                    alphabetcolors: scope.alphabetcolors || defaultSettings.alphabetcolors
+                    alphabetcolors: scope.alphabetcolors || defaultSettings.alphabetcolors,
+                    avatarCustomBGColor: attrs.avatarcustombgcolor || defaultSettings.custombgcolor,
+                    dynamic: attrs.dynamic || defaultSettings.dynamic,
+                    rotatedeg: attrs.rotatedeg || defaultSettings.rotatedeg
                 };
-                var c ='';
-                if (params.charCount == 2) {
-                    var _data = getFirstAndLastName(params.data.toUpperCase());
-                    if(_data){
-                        c = _data;
-                    }else{
-                        c = params.data.substr(0, params.charCount).toUpperCase();
-                    }
-                } else {
-                    c = params.data.substr(0, params.charCount).toUpperCase();
-                }
-                var cobj = getCharacterObject(c, params.textColor, params.fontFamily, params.fontWeight, params.fontsize);
-                var colorIndex = '';
-                var color = '';
-
+                
                 /**
-                 * Populete the colors according to attributes
+                 * to generate the avatar dynamically on data change, enable the below function to watch the event
                  */
-                if (c.charCodeAt(0) < 65) {
-                    color = getRandomColors();
+                if (params.dynamic === 'true') {
+                    scope.$watch('data', function () {
+                        _generateLetterAvatar();
+                    });
                 } else {
-                    colorIndex = Math.floor((c.charCodeAt(0) - 65) % params.alphabetcolors.length);
-                    color = params.alphabetcolors[colorIndex];
+                    _generateLetterAvatar();
                 }
 
-                var svg = getImgTag(params.width, params.height, color);
-                svg.append(cobj);
-                var lvcomponent = angular.element('<div>').append(svg.clone()).html();
-                var svgHtml = window.btoa(unescape(encodeURIComponent(lvcomponent)));
-                var component;
-                var base = defaultSettings.base;
-                var _style = '';
-                if (params.avatarBorderStyle) {
-                    _style = params.avatarBorderStyle;
-                } else if (params.avatardefaultBorder) {
-                    _style = params.defaultBorder;
-                }
-
-                if (params.shape) {
-                    if (params.shape === 'round') {
-                        var round_style = defaultSettings.radius + _style;
-                        component = "<img src=" + base + svgHtml + " style='" + round_style + "' />";
+                function _generateLetterAvatar() {
+                    var c = '';
+                    if (params.charCount == 2) {
+                        var _data = getFirstAndLastName(scope.data.toUpperCase());
+                        if (_data) {
+                            c = _data;
+                        } else {
+                            c = scope.data.substr(0, params.charCount).toUpperCase();
+                        }
+                    } else {
+                        c = scope.data.substr(0, params.charCount).toUpperCase();
                     }
-                } else {
-                    component = "<img src=" + base + svgHtml + " style='" + _style + "' />";
+                    var cobj = getCharacterObject(c, params.textColor, params.fontFamily, params.fontWeight, params.fontsize);
+                    var colorIndex = '';
+                    var color = '';
+
+                    /**
+                     * Populate the colors according to attributes
+                     */
+                    if (c.charCodeAt(0) < 65) {
+                        color = getRandomColors();
+                    } else {
+                        colorIndex = Math.floor((c.charCodeAt(0) - 65) % params.alphabetcolors.length);
+                        color = params.alphabetcolors[colorIndex];
+                    }
+
+                    if (params.avatarCustomBGColor) {
+                        color = params.avatarCustomBGColor;
+                    }
+
+                    var svg = getImgTag(params.width, params.height, color);
+                    svg.append(cobj);
+                    var lvcomponent = angular.element('<div>').append(svg.clone()).html();
+                    var svgHtml = window.btoa(unescape(encodeURIComponent(lvcomponent)));
+                    var component;
+                    var base = defaultSettings.base;
+                    var _style = '';
+                    if (params.avatarBorderStyle) {
+                        _style = params.avatarBorderStyle;
+                    } else if (params.avatardefaultBorder) {
+                        _style = params.defaultBorder;
+                    }
+                    
+                    if(params.rotatedeg != '0'){
+                        _style = '-ms-transform: rotate('+params.rotatedeg+'deg); -webkit-transform: rotate('+params.rotatedeg+'deg); transform: rotate('+params.rotatedeg+'deg)';
+                    }
+
+                    if (params.shape) {
+                        if (params.shape === 'round') {
+                            var round_style = defaultSettings.radius + _style;
+                            component = "<img src=" + base + svgHtml + " style='" + round_style + "' title='"+scope.data+"' />";
+                        }
+                    } else {
+                        component = "<img src=" + base + svgHtml + " style='" + _style + "' title='"+scope.data+"' />";
+                    }
+
+                    if (params.dynamic === 'true') {
+                        element.empty();
+                        element.append(component);
+                    } else {
+                        element.replaceWith(component);
+                    }
                 }
-                element.replaceWith(component);
             }
         };
     }]);
-
 /**
  * Get the random colors 
  * @returns {String}
