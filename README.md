@@ -50,7 +50,7 @@ You can affect how letteravatar operates with the following settings:
 name | default | description
 -----|---------|------------
 `avatarcustombgcolor` | No default value | Using this attribute set the custom color for avatar background.
-`dynamic` | true | Set this attribute to true if dynamically avatar needs to be generated on data change.
+`dynamic` | false | Set this attribute to true if dynamically avatar needs to be generated on data change.
 `rotatedeg` | 0 | Set this attribute required degrees of rotation of the avatar.
 `alphabetcolors` | default color set | Using this attribute set the custom colors for the alphabets only.
 `charCount` | 1 | Specifies the number of letters to displayed. to generate combined letter avatar of first name and last name which are separated by space then set the value to '2'
