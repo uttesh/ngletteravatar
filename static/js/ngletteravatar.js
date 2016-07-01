@@ -128,7 +128,7 @@ nla.directive('ngLetterAvatar', ['defaultSettings', function (defaultSettings) {
                             var round_style = defaultSettings.radius + _style;
                             if (scope.data.indexOf('http') > -1 || scope.data.indexOf('data:image') > -1) {
                                 var img_size = 'width:'+params.width+'px;height:'+params.height+'px;';
-                                component = "<img src=" + scope.data + " style='" + img_size + round_style + "' title='" + scope.data + "' />";
+                                component = "<img src=" + scope.data + " style='" + img_size + round_style + "'  />";
                             } else {
                                 component = "<img src=" + base + svgHtml + " style='" + round_style + "' title='" + scope.data + "' />";
                             }
@@ -136,7 +136,7 @@ nla.directive('ngLetterAvatar', ['defaultSettings', function (defaultSettings) {
                     } else {
                         if (scope.data.indexOf('http') > -1 || scope.data.indexOf('data:image') > -1) {
                             var img_size = 'width:'+params.width+'px;height:'+params.height+'px;';
-                            component = "<img src=" + scope.data + " style='" + img_size + _style + "' title='" + scope.data + "' />";
+                            component = "<img src=" + scope.data + " style='" + img_size + _style + "'  />";
                         } else {
                             component = "<img src=" + base + svgHtml + " style='" + _style + "' title='" + scope.data + "' />";
                         }
