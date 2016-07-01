@@ -62,8 +62,10 @@ nla.directive('ngLetterAvatar', ['defaultSettings', function (defaultSettings) {
                     avatarCustomBGColor: attrs.avatarcustombgcolor || defaultSettings.custombgcolor,
                     dynamic: attrs.dynamic || defaultSettings.dynamic,
                     rotatedeg: attrs.rotatedeg || defaultSettings.rotatedeg
+
+
                 };
-                
+
                 /**
                  * to generate the avatar dynamically on data change, enable the below function to watch the event
                  */
@@ -117,18 +119,27 @@ nla.directive('ngLetterAvatar', ['defaultSettings', function (defaultSettings) {
                     } else if (params.avatardefaultBorder) {
                         _style = params.defaultBorder;
                     }
-                    
-                    if(params.rotatedeg != '0'){
-                        _style = '-ms-transform: rotate('+params.rotatedeg+'deg); -webkit-transform: rotate('+params.rotatedeg+'deg); transform: rotate('+params.rotatedeg+'deg)';
-                    }
 
+                    if (params.rotatedeg != '0') {
+                        _style = '-ms-transform: rotate(' + params.rotatedeg + 'deg); -webkit-transform: rotate(' + params.rotatedeg + 'deg); transform: rotate(' + params.rotatedeg + 'deg)';
+                    }
                     if (params.shape) {
                         if (params.shape === 'round') {
                             var round_style = defaultSettings.radius + _style;
-                            component = "<img src=" + base + svgHtml + " style='" + round_style + "' title='"+scope.data+"' />";
+                            if (scope.data.indexOf('http') > -1 || scope.data.indexOf('data:image') > -1) {
+                                var img_size = 'width:'+params.width+'px;height:'+params.height+'px;';
+                                component = "<img src=" + scope.data + " style='" + img_size + round_style + "' title='" + scope.data + "' />";
+                            } else {
+                                component = "<img src=" + base + svgHtml + " style='" + round_style + "' title='" + scope.data + "' />";
+                            }
                         }
                     } else {
-                        component = "<img src=" + base + svgHtml + " style='" + _style + "' title='"+scope.data+"' />";
+                        if (scope.data.indexOf('http') > -1 || scope.data.indexOf('data:image') > -1) {
+                            var img_size = 'width:'+params.width+'px;height:'+params.height+'px;';
+                            component = "<img src=" + scope.data + " style='" + img_size + _style + "' title='" + scope.data + "' />";
+                        } else {
+                            component = "<img src=" + base + svgHtml + " style='" + _style + "' title='" + scope.data + "' />";
+                        }
                     }
 
                     if (params.dynamic === 'true') {
