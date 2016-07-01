@@ -54,7 +54,7 @@ name | default | description
 `rotatedeg` | 0 | Set this attribute required degrees of rotation of the avatar.
 `alphabetcolors` | default color set | Using this attribute set the custom colors for the alphabets only.
 `charCount` | 1 | Specifies the number of letters to displayed. to generate combined letter avatar of first name and last name which are separated by space then set the value to '2'
-`data` |  | input data
+`data` |  | Input data i.e. email, names...etc -OR- If image already exists for item, set image URL or image data
 `height` | 50px | set the height for the avatar
 `width` | 50px | set the width for the avatar
 `fontWeight` | 400 | set the font weight for the  avatar
