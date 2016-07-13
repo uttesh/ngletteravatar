@@ -1,6 +1,6 @@
 {
   "name": "ngletteravatar",
-  "version": "4.0.2",
+  "version": "4.0.4",
   "description": "directive for the letter avatar for the given string like gmail, first letter of the given data will be the avatar",
   "main": "ngletteravatar.js",
   "scripts": {
