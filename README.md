@@ -1,6 +1,10 @@
+for Angular2 support component <a href='https://github.com/uttesh/ng2letteravatar'> ng2leteravatar</a>
+
+
+
+
 # ng-letter-avatar [![Build Status](https://travis-ci.org/uttesh/ngletteravatar.svg?branch=master)](https://travis-ci.org/uttesh/ngletteravatar)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/uttesh/ngletteravatar?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
-
 
 AngularJS directive for simple data avatar like gmail/inbox. 
 <a href="http://uttesh.github.io/ngletteravatar/">demo</a>
