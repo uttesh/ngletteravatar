@@ -1,6 +1,6 @@
 
 <h2>
-For the latest Angular, added ngletteravatar component to the  <a href='The utility components,service,directives and pipes for Angular. https://github.com/uttesh/ngu-utility'> ngu-utility</a>, use ngu-utility for the latest angular2 or above versions
+For the latest Angular, added ngletteravatar component to the <a href="https://github.com/uttesh/ngu-utility"> ngu-utility</a>, use ngu-utility for the latest angular2 or above versions
 <h2>
 
 
