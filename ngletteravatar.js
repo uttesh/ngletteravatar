@@ -102,7 +102,7 @@ nla.directive('ngLetterAvatar', ['defaultSettings', function (defaultSettings) {
                     }
 
                     if (params.avatarCustomBGColor) {
-                        color = params.avatarCustomBGColor;
+                        color = attrs.avatarcustombgcolor || params.avatarCustomBGColor;
                     }
 
                     var svg = getImgTag(params.width, params.height, color);
