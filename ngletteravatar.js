@@ -36,7 +36,7 @@ nla.directive('ngLetterAvatar', ['defaultSettings', function (defaultSettings) {
             restrict: 'AE',
             replace: true,
             scope: {
-                alphabetcolors: '=alphabetcolors',
+                alphabetcolors: '=?alphabetcolors',
                 data: '@'
             },
             link: function (scope, element, attrs) {
@@ -235,4 +235,3 @@ function getCharacterObject(character, textColor, fontFamily, fontWeight, fontsi
 
     return textTag;
 }
-
