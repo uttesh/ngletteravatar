@@ -73,7 +73,12 @@ nla.directive('ngLetterAvatar', ['defaultSettings', function (defaultSettings) {
                         _generateLetterAvatar();
                     });
                 } else {
-                    _generateLetterAvatar();
+                    var deregister = scope.$watch('data', function(data) {
+                        if (angular.isString(data) && data !== "") {
+                            _generateLetterAvatar();
+                            deregister();
+                        }
+                    });
                 }
 
                 function _generateLetterAvatar() {
