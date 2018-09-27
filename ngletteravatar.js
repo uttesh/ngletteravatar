@@ -100,15 +100,20 @@ nla.directive('ngLetterAvatar', ['defaultSettings', function (defaultSettings) {
                 /**
                  * Populate the colors according to attributes
                  */
-
-                if (c.charCodeAt(0) < 65) {
-                    color = getRandomColors();
-                } else {
-                    colorIndex = Math.floor((c.charCodeAt(0) - 65) % params.alphabetcolors.length);
-                    color = params.alphabetcolors[colorIndex];
-                }
                 // assign the avatarcustombgcolor scope to change the color
-                color = scope.avatarcustombgcolor || '';
+                if (scope.avatarcustombgcolor) {
+                    color = scope.avatarcustombgcolor;
+
+                } else {
+
+                    if (c.charCodeAt(0) < 65) {
+                        color = getRandomColors();
+                    } else {
+                        colorIndex = Math.floor((c.charCodeAt(0) - 65) % params.alphabetcolors.length);
+                        color = params.alphabetcolors[colorIndex];
+                    }
+                }
+
 
                 var svg = getImgTag(params.width, params.height, color);
                 svg.append(cobj);
