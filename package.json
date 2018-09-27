@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/uttesh/ngletteravatar/issues"
   },
-  "homepage": "https://github.com/uttesh/ngletteravatar#readme"
+  "homepage": "https://github.com/uttesh/ngletteravatar#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
